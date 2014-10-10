@@ -1,0 +1,101 @@
+SET NAMES utf8;
+SET FOREIGN_KEY_CHECKS = 0;
+
+CREATE DATABASE IF NOT EXISTS TechnologyProblem;
+USE TechnologyProblem;
+
+# Problem categories
+/*
+CREATE TABLE ProblemCategories (
+	   problemCategoryID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	   categoryName VARCHAR(100) NOT NULL
+);
+*/
+# Technoly problem table definition
+CREATE TABLE Problem (
+       pID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,	   
+#      problemCategoryID INT NOT NULL,
+       eName VARCHAR(100) DEFAULT NULL,
+       eCategory VARCHAR(100) DEFAULT NULL,
+       eAddress VARCHAR(100) DEFAULT NULL,
+       ePostCode CHAR(6) DEFAULT NULL,
+       contact VARCHAR(100) DEFAULT NULL,
+       mobilePhone VARCHAR(20) DEFAULT NULL,
+       telePhone VARCHAR(20) DEFAULT NULL,
+       faxNumber VARCHAR(20) DEFAULT NULL, 
+       eMail VARCHAR(100) DEFAULT NULL,
+       qq VARCHAR(20) DEFAULT NULL,
+       mainProducts VARCHAR(200) DEFAULT NULL,  
+       pName VARCHAR(100),
+       pCategory VARCHAR(100),
+       contactName VARCHAR(100) NOT NULL,
+       faxNumber VARCHAR(20) DEFAULT NULL,
+       bgDescription VARCHAR(100) DEFAULT NULL,
+       pDescription VARCHAR(100) DEFAULT NULL
+       #FOREIGN KEY (enterpriseID) REFERENCES EnterpriseInformation(enterpriseID)
+/*	   FOREIGN KEY (problemCategoryID) REFERENCES ProblemCategories(categoryName) */
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# insert some samples
+INSERT INTO Problem (eName, eCategory, eAddress, ePostCode, contact, mobilePhone, 
+telePhone, faxNumber, eMail, qq, mainProducts, pName, pCategory, contactName, 
+faxNumber, bgDescription, pDescription) VALUES
+       ("企业A", "医药", "中国哈尔滨", "150001", "王世全", "15112345678", 
+"68594201", "34567823", "123@qq.com", "123456", "保健品，抗生素", '怎样修理计算机', 'IT', '王三', 
+'12345678', '背景描述1', '问题描述1'),
+       ("企业B", "IT", "USA", "150001", "Tom", "18942356789", 
+"68456789", "22222222", "45678@qq.com", "123456", "路由器，技术支持", '制药准则', '医药', '赵武', 
+'12345678', '背景描述2', '问题描述2');
+
+CREATE TABLE ICase(
+       cID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	   department VARCHAR(100) DEFAULT NULL,
+       sector VARCHAR(100) DEFAULT NULL,
+       category VARCHAR(100) DEFAULT NULL,
+       mobilePhone VARCHAR(20) DEFAULT NULL,
+       faxNumber VARCHAR(20) DEFAULT NULL, 
+       eMail VARCHAR(100) DEFAULT NULL,
+       qq VARCHAR(20) DEFAULT NULL,
+
+       title VARCHAR(100)  DEFAULT NULL,
+       abstract VARCHAR(100) DEFAULT NULL,
+       description VARCHAR(100) DEFAULT NULL,
+       course VARCHAR(100) DEFAULT NULL,
+       cSolution VARCHAR(100) DEFAULT NULL,
+       sEmployed VARCHAR(100) DEFAULT NULL,
+       sImplementation VARCHAR(100) DEFAULT NULL
+       #FOREIGN KEY (providerID) REFERENCES ProviderInformation(providerID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO CaseInformation (department, sector, category, mobilePhone, faxNumber, eMail, qq, 
+title, abstract, description, course, conceptSolution, solutionEmployed, solutionImplementation) VALUES
+       ('部门1', '单位1', '管理', '15136432011', '18945072658', '456789@qq.com', '456789', 
+'案例甲', '摘要甲', '描述甲', '过程甲', '概念解决方案', '采用解决方案', '解决方案实施'), 
+       ('部门2', '单位2', '营销', '15136432011', '18945072658', '456789@qq.com', '456789', 
+'案例乙', '摘要乙', '描述乙', '过程乙', '概念解决方案', '采用解决方案', '解决方案实施');
+
+# Studetn inforamtion
+CREATE TABLE Student (
+       sID INT PRIMARY KEY AUTO_INCREMENT,
+       pPath VARCHAR(100) NOT NULL,
+       sName VARCHAR(100) DEFAULT NULL,
+       sSex CHAR(2) DEFAULT NULL,
+       startWorkTime CHAR(8) DEFAULT NULL,
+       birthday CHAR(6) DEFAULT NULL,
+       cMajor VARCHAR(100) DEFAULT NULL,
+       eTitle VARCHAR(100) DEFAULT NULL,
+       company VARCHAR(100) DEFAULT NULL,
+       department VARCHAR(100) DEFAULT NULL,
+       telePhone VARCHAR(20) DEFAULT NULL,
+       mobilePhone VARCHAR(20) DEFAULT NULL,
+       eMail VARCHAR(100) DEFAULT NULL,
+       qq VARCHAR(20) DEFAULT NULL,
+       address VARCHAR(100) DEFAULT NULL,
+       education VARCHAR(20) DEFAULT NULL,
+       gSchool VARCHAR(20) DEFAULT NULL,
+       major VARCHAR(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO Student (pPath, sName, sSex, startWorkTime, birthday, cMajor, eTitle, company, department, telephone, mobilePhone, eMail, qq, address, education, gSchool, major) VALUES 
+       ('', '李明', '男', '19900214', '198901', '计算机科学与技术', '总裁', 'Facebook', '算法设计', '12345678', '12345678910', '785689@qq.com', '786549', 'USA', '本科', 'Standford', '计算机科学与技术'),
+       ('', '李彦宏', '男', '19900214', '198901', '计算机科学与技术', '总裁', 'Baidu', '算法设计', '12345678', '12345678910', '785689@qq.com', '786549', 'USA', '本科', '北京大学', '计算机科学与技术');
