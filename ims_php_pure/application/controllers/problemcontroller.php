@@ -176,7 +176,7 @@ class ProblemController extends CI_Controller {
         $data['queryData'] = $this->problemmodel->getQueryData();
         
         //Print_r($data['queryData']['queryCName']);
-        $this->load->view('problem', $data);
+        $this->load->view('www/page/problem', $data);
     }
     
     public function selectProblemByEName() {

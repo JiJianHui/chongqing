@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-/*$config['base_url']	= 'http://localhost/ims_php_pure/'; */
-$config['base_url']	= 'http://221.206.123.10/';
+$config['base_url']	= 'http://localhost/ims_php_pure/'; 
+//$config['base_url']	= 'http://221.206.123.10/';
 /*
 |--------------------------------------------------------------------------
 | Index File

@@ -4,35 +4,22 @@
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-	<script src="./www/js/jquery1.83.js"></script>
+        <title>Template</title>
+
         
         <script type="text/javascript">
             $(document).ready(function() {
-              $("#header").load("./application/views/www/layout/header.html");
-              $("#menu").load("./application/views/www/layout/menu.html");
-
-              $("#footer").load("./application/views/www/layout/footer.html");
+//              $("#header").load("./application/views/www/layout/header.html");
+              $("#menu").load("/ims_php_pure/application/views/www/layout/menu.html");
+              $("#footer").load("/ims_php_pure/application/views/www/layout/footer.html");
             });
         </script>
         
-        <link rel="stylesheet" type="text/css" href="./www/css/layout.css" media="screen, projection, tv " />
-        <link rel="stylesheet" type="text/css" href="./www/css/html.css" media="screen, projection, tv " />
-        <link rel="stylesheet" type="text/css" href="./www/css/index.css" media="screen, projection, tv " />
-
-        <style type="text/css">
-        <!--
-        .style2 {color: #627E9A}
-        .style3 {color: #62CC3C}
-        .style6 {color: #5C8096}
-        -->
-          </style>
+        <?php include '/ims_php_pure/application/views/www/layout/includeForLayout.php';?>
     </head>
     
     <body>
-        <div id="header" class="width"></div>
+        <!--<div id="header" class="width"></div>-->
         <div id="headerImg" class="width">公司技术信息后台管理系统</div>
         <div id="menu" class="width"></div>
         <div id="content"></div>

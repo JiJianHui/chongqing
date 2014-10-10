@@ -4,24 +4,23 @@
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>登陆系统</title>
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 	<script src="./www/js/jquery1.83.js"></script>
+        <link rel="stylesheet" type="text/css" href="./www/css/layout.css" media="screen, projection, tv " />
+        <link rel="stylesheet" type="text/css" href="./www/css/html.css" media="screen, projection, tv " />
+        <link rel="stylesheet" type="text/css" href="./www/css/index.css" media="screen, projection, tv " />
+        <link href="./www/css/bootstrap.css" rel="stylesheet" type="text/css" />
         
         <script type="text/javascript">
             $(document).ready(function() {
-              $("#header").load("./application/views/www/layout/header.html");
+//              $("#header").load("./application/views/www/layout/header.html");
               $("#menu").load("./application/views/www/layout/menu.html");
 //              $("#content").load("./application/views/www/page/loginContent.php");
               $("#footer").load("./application/views/www/layout/footer.html");
             });
         </script>
-        
-        <link rel="stylesheet" type="text/css" href="./www/css/layout.css" media="screen, projection, tv " />
-        <link rel="stylesheet" type="text/css" href="./www/css/html.css" media="screen, projection, tv " />
-        <link rel="stylesheet" type="text/css" href="./www/css/index.css" media="screen, projection, tv " />
-        <link href="./www/css/bootstrap.css" rel="stylesheet" type="text/css" />
         
         <style type="text/css">
         <!--
@@ -34,7 +33,7 @@
     </head>
     
     <body>
-        <div id="header" class="width"></div>
+        <!--<div id="header" class="width"></div>-->
         <div id="headerImg" class="width">公司技术信息后台管理系统</div>
         <div id="menu" class="width"></div>
         <div id="content" class="width">

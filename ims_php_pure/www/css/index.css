@@ -68,3 +68,62 @@ and open the template in the editor.
 .updateLine .btn{
     margin-left: 250px;
 }
+
+
+/*技术难题中的搜索部分*/
+.searchAreas{
+    text-align: left;
+    width: 100%;
+}
+
+.searchLine{
+    float:left;
+    width:30%;
+    margin-left: 3%;
+}
+
+.searchTitle{
+    font-family: Times New Roman;
+}
+
+.searchLine select{
+    width: 70%;
+    border-radius: 3px;
+    background: white;
+    height: 30px;
+    line-height: 30px;
+    
+}
+
+.recordTables{
+    float:left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    line-height: 16px;
+    width: 90%;
+    margin-left: 3%;
+    font-family: Tahoma, Geneva,"\5FAE\8F6F\96C5\9ED1","\5b8b\4f53",sans-serif;
+}
+
+.recordTables tr td,.recordTables tr th{
+    border: 1px dashed #bbb;
+    padding: 4px;
+    text-align: center;
+    width: 150px;
+    height: 20px;
+    font-size: 13px;
+}
+
+.recordTables  a{
+    text-align: left;
+}
+
+.recordTables tr td,
+.recordTables tr,
+.recordTables{
+    border-collapse: collapse;
+}
+
+.recordTables .editCol{
+    width: 480px;
+}
