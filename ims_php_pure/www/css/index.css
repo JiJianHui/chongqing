@@ -16,3 +16,55 @@ and open the template in the editor.
 #menu ul li a:hover{
     /*background-color: blanchedalmond;*/
 }
+
+.loginDiv{
+    margin-top: 50px;
+    border: 1px solid red;
+    height: 300px;
+}
+
+.loginTitle{
+    font-size: 18px;
+    padding-bottom: 30px;
+    color:  #008000;
+}
+
+.loginDiv .loginLine{
+    margin-bottom: 10px;
+}
+
+.loginLines{
+    width: 400px;
+    /*border: 1px solid blue;*/
+    margin-top: 50px;
+    /*border: 1px dotted red;*/
+    margin-left: 300px;
+    text-align: left;
+}
+    
+ .updateLine{
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: '宋体', 'Microsoft Yahei', '微软雅黑', sans-serif;;
+    /*border: 1px dotted red;*/
+}
+
+.updateLine .text{
+    width: 500px;
+    text-align: left;
+    /*margin-right: 330px;*/
+}
+
+.updateLine .warning{
+    color: red;
+    font-size: 13px;
+}
+
+
+.updateLine .input{
+    width: 300px;
+}   
+
+.updateLine .btn{
+    margin-left: 250px;
+}

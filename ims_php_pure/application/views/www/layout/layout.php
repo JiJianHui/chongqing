@@ -7,20 +7,20 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-	<script src="../js/jquery1.83.js"></script>
+	<script src="./www/js/jquery1.83.js"></script>
         
         <script type="text/javascript">
             $(document).ready(function() {
-              $("#header").load("header.html");
-              $("#menu").load("menu.html");
-              $("#conent").load("course.html");
-              $("#footer").load("footer.html");
+              $("#header").load("./application/views/www/layout/header.html");
+              $("#menu").load("./application/views/www/layout/menu.html");
+
+              $("#footer").load("./application/views/www/layout/footer.html");
             });
         </script>
         
-        <link rel="stylesheet" type="text/css" href="../css/layout.css" media="screen, projection, tv " />
-        <link rel="stylesheet" type="text/css" href="../css/html.css" media="screen, projection, tv " />
-        <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen, projection, tv " />
+        <link rel="stylesheet" type="text/css" href="./www/css/layout.css" media="screen, projection, tv " />
+        <link rel="stylesheet" type="text/css" href="./www/css/html.css" media="screen, projection, tv " />
+        <link rel="stylesheet" type="text/css" href="./www/css/index.css" media="screen, projection, tv " />
 
         <style type="text/css">
         <!--
