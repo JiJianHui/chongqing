@@ -110,6 +110,7 @@
 
 #menu {
   margin: 0 auto;
+  height: 5em;
 }
 
 #menu ul {
@@ -120,6 +121,7 @@
 
   text-align: left;
   background: #3B5D77 url(../images/bg/menu.gif) repeat-x top left;
+  height: auto;
 }
 
 #menu ul li {
@@ -127,12 +129,15 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 20%;
+  
 }
 
 #menu ul li a {
   float: left;
   width: 25%;
-  height: 4.5em;
+  /*height: 4.5em;*/
+  /*line-height: 4.5em;*/
 
   font: 400 1.2em arial, sans-serif;
   letter-spacing: 0.1em;
@@ -140,7 +145,13 @@
   color: #fff;
 
   border-top: 7px solid #41637D;
-  border-bottom: 15px solid #FFF;
+  /*border-bottom: 15px solid #FFF;*/
+  cursor:hand;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #menu ul li a span {
@@ -167,7 +178,7 @@
 }
 
 
-/* Top menu icons */
+ Top menu icons 
 #menu ul li a span.speaker {
   padding-left: 22px;
   background: url(../images/icons/speaker.gif) no-repeat 5px 50%;
