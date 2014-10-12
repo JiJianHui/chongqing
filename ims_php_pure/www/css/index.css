@@ -95,6 +95,10 @@ and open the template in the editor.
     
 }
 
+.searchResults{
+    width:100%;
+}
+
 .recordTables{
     float:left;
     margin-top: 30px;
@@ -126,4 +130,97 @@ and open the template in the editor.
 
 .recordTables .editCol{
     width: 480px;
+}
+
+
+.fileAddDiv{
+    text-align: right;
+    float: right;
+    width:500px;
+    margin-left:300px;
+    /*border:1px dotted red;*/
+}
+
+
+.fileAddDiv a{
+    float:left;
+    margin-right: 20px;
+    width:120px;
+}
+
+.fileAddDiv form{
+    width:350px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.fileAddDiv .uploadFormDiv{
+    float:left;
+    /*border:1px dotted blue;*/
+}
+
+.fileAddDiv .uploadFormDiv input{
+    float:left;
+    margin: 0px;
+    width:150px;
+    /*border:1px dotted red;*/
+    margin-right:10px;
+    color:#ffffff;
+    background-color: #5cb85c;
+    border-color:#4cae4c;
+}
+
+
+/*-----------------添加新的难题CSS---------------------*/
+.addNewProblemForm{
+    clear:both;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.addNewProblemForm .info{
+    margin-bottom: 15px;
+}
+
+.addNewProblemForm .infoMiddle{
+    margin-top: 15px;
+}
+
+.addNewProblemForm .title{
+    color:#4cae4c;
+    font-weight: bold;
+    font-size:24px;
+}
+
+.addNewProblemForm span{
+    display: inline-block;
+    width:80px;
+    max-width:80px;
+    text-align: right;
+}
+
+
+.addNewProblemForm input{
+    width: 200px;
+    display: inline;
+    background-color: white;
+}
+
+.addNewProblemForm .Long{
+    width:770px;
+}
+
+.addNewProblemForm .MiddleLong{
+    width:480px;
+}
+
+.addNewProblemForm .infoLine{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.addNewProblemForm textArea{
+    background-color: white;
+    display: inline;
+    margin-right: 0px;
 }
