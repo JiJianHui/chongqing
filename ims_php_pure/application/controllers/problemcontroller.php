@@ -5,7 +5,7 @@ class ProblemController extends CI_Controller {
     public function addProblem() {
         $isFirst = $this->input->get('isFirst', true);
         if(empty($isFirst) == FALSE) {
-            $this->load->view('problem_Add');
+            $this->load->view('www/page/problem_Add');
         } else {
             $eName = $_POST['eName'];
             $eCategory = $_POST['eCategory'];

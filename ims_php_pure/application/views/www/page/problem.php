@@ -27,11 +27,10 @@
         <!--<div id="header" class="width"></div>-->
         <div id="headerImg" class="width">公司技术信息后台管理系统</div>
         <div id="menu" class="width">   
-            <ul>
-            <li><a href="/ims_php_pure/index.php/problemcontroller/getProblem">企业技术难题</a></li>
-            <li><a href="/ims_php_pure/index.php/studentcontroller/getStudent" class="forum" >创新人才管理</a></li>
-            <li><a href="/ims_php_pure/index.php/casecontroller/getCase" >创新案例</a></li>
-            </ul>
+            <?php 
+            chdir( dirname(__FILE__) );
+            require( '../layout/menu.php' );
+            ?>
         </div>
         <div id="content" class="width">
 
@@ -121,9 +120,23 @@
                     </tr>
                        <?php } ?>
                     </table>
+                <div style="clear:both;"></div>
+                <div class="fileAddDiv">
+                    <?php $addURL = site_url('problemcontroller/addProblem?isFirst=1'); ?>
+                    <a href = "<?php print $addURL?>">添加新的技术难题</a>
+                    <div class="uploadFormDiv">
+                    <?php
+                        echo form_open_multipart(site_url('upload/upload_file'));
+                        echo form_upload('userfile');
+                        echo form_submit('upload', '上传文件');
+                    ?>    
+                    </div>
+                </div>
             </div>
             
         </div>
-        <div id="footer" class="width"></div>
+        <div id="footer" class="width">
+            
+        </div>
     </body>
 </html>
