@@ -49,7 +49,7 @@ class ProblemController extends CI_Controller {
             $this->load->model('problemmodel');
             $this->problemmodel->addProblem($record);
             $data['records'] = $this->problemmodel->getProblem();
-            $this->load->view('problem', $data);
+            $this->load->view('www/page/problem', $data);
         }
     }
 

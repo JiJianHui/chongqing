@@ -84,15 +84,15 @@
             <div class="searchResults">
                 <table class="recordTables">
                     <tr>
-                        <th>难题ID</th>
-                        <th>公司ID</th>
-                        <th>标题</th>
-                        <th>类别</th>
-                        <th>联系人</th>
-                        <th>传真</th>
-                        <th>背景描述</th>
-                        <th>问题描述</th>
-                        <th>操作</th>
+                        <th  class="shortTD">难题ID</th>
+                        <th class="MiddleTD">公司名称</th>
+                        <th class="MiddleTD">标题</th>
+                        <th class="MiddleTD">类别</th>
+                        <th class="tinyTD">联系人</th>
+                        <!--<th class="MiddleTD">传真</th>-->
+                        <!--<th class="MiddleTD">背景描述</th>-->
+                        <th class="MiddleTD">问题描述</th>
+                        <th class="editCol">操作</th>
                     </tr>
                     <?php
                         foreach($records as $rec) { 
@@ -103,20 +103,20 @@
                             $importURL = site_url('problemcontroller/exportProblem?pID=').$rec->pID;
                         ?>
                     <tr>
-                            <td><?php echo $rec->pID ?></td>
-                            <td><?php echo $rec->eName ?></td>
-                            <td><?php echo $rec->pName ?></td>
-                            <td><?php echo $rec->pCategory ?></td>
-                            <td><?php echo $rec->contact ?></td>
-                            <td><?php echo $rec->faxNumber ?></td>
-                            <td><?php echo $rec->bgDescription ?></td>
-                            <td><?php echo $rec->pDescription ?></td>
-                            
-                            <td class="editCol"><a href = "<?php print $deleteURL?>">删除</a>
-                            <a href = "<?php print $modifyURL?>">修改</a> 
-                            <a href = "<?php print $exportURL?>">导出word</a>
-                            <a href = "<?php print $export2pdfURL?>">导出pdf</a> 
-                            </td>
+                        <td class="shortTD"><?php echo $rec->pID ?></td>
+                        <td class="MiddleTD" title="<?php echo $rec->eName ?>"><?php echo $rec->eName ?></td>
+                        <td class="MiddleTD" title='<?php echo $rec->pName ?>'><?php echo $rec->pName ?></td>
+                        <td class="MiddleTD"><?php echo $rec->pCategory ?></td>
+                        <td class="tinyTD"><?php echo $rec->contact ?></td>
+                        <!--<td class="MiddleTD">php echo $rec->faxNumber</td>-->
+                        <!--<td class="MiddleTD">php echo $rec->bgDescription ?></td>-->
+                        <td class="MiddleTD" title="<?php echo $rec->pDescription ?>"><?php echo $rec->pDescription ?></td>
+
+                        <td class="editCol"><a href = "<?php print $deleteURL?>">删除</a>
+                        <a href = "<?php print $modifyURL?>">修改</a> 
+                        <a href = "<?php print $exportURL?>">导出word</a>
+                        <a href = "<?php print $export2pdfURL?>">导出pdf</a> 
+                        </td>
                     </tr>
                        <?php } ?>
                     </table>
