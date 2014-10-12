@@ -107,16 +107,44 @@ and open the template in the editor.
     width: 90%;
     margin-left: 3%;
     font-family: Tahoma, Geneva,"\5FAE\8F6F\96C5\9ED1","\5b8b\4f53",sans-serif;
+    table-layout: fixed;
 }
 
 .recordTables tr td,.recordTables tr th{
     border: 1px dashed #bbb;
     padding: 4px;
     text-align: center;
-    width: 150px;
+    /*width: 150px;*/
     height: 20px;
     font-size: 13px;
 }
+
+.recordTables tr td{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+.recordTables .shortTD{
+    width:50px;
+    max-width: 50px;
+}
+
+.recordTables .tinyTD{
+    width:80px;
+    max-width: 80px;
+}
+
+.recordTables .MiddleTD{
+    width: 150px;
+    max-width: 80px;
+}
+
 
 .recordTables  a{
     text-align: left;
@@ -129,7 +157,7 @@ and open the template in the editor.
 }
 
 .recordTables .editCol{
-    width: 480px;
+    width: 200px;
 }
 
 
