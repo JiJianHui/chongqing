@@ -12,8 +12,8 @@
              <label>姓名：<input type = "text" name = "sName"></label><br/>
              <label>性别：<input type = "text" name = "sSex"></label><br/>
              <label>参加工作时间：<input type = "text" name = "startWorkTime"></label><br/>
-             <label>现从事专业：<input type = "text" name = "birthday"></label><br/>
-             <label>出生年月：<input type = "text" name = "cMajor"></label><br/>
+             <label>现从事专业：<input type = "text" name = "cMajor"></label><br/>
+             <label>出生年月：<input type = "text" name = "birthday"></label><br/>
              <label>行政职务：<input type = "text" name = "eTitle"></label><br/>
              <label>工作单位：<input type = "text" name = "company"></label><br/>
              <label>所在部门：<input type = "text" name = "department"></label><br/>

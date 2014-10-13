@@ -12,5 +12,11 @@
      <a href = "<?php echo site_url('studentcontroller/getStudent') ?>"><label>创新人才</label></a>
      <a href = "<?php echo site_url('casecontroller/getCase') ?>"><label>创新案例</label></a>
 </fieldset>
+    
+    <script type="text/javascript">
+        window.location.href = <?php site_url('problemcontroller/getProblem') ?>
+        window.location.reload();
+    </script>
+    
 </body>
 </html>

@@ -10,13 +10,13 @@ class StudentController extends CI_Controller {
         $isFirst = $this->input->get('isFirst', true);
         
         if(empty($isFirst) == FALSE) {
-            $this->load->view('student_Add');
+            $this->load->view('www/page/student_Add');
         } else {
             $sName = $_POST['sName'];
             $sSex = $_POST['sSex'];
             $startWorkTime = $_POST['startWorkTime'];
             $birthday = $_POST['birthday'];
-            $cMajor = $_POST['cMajor'];                        
+//            $cMajor = $_POST['cMajor'];                        
             $eTitle = $_POST['eTitle'];
             $company = $_POST['company'];
             $department = $_POST['department'];
@@ -34,7 +34,7 @@ class StudentController extends CI_Controller {
                 'sSex' => $sSex,
                 'startWorkTime' => $startWorkTime,
                 'birthday' => $birthday,
-                'cMajor' => $cMajor,
+//                'cMajor' => $cMajor,
                 'eTitle' => $eTitle,
                 'company' => $company,
                 'department' => $department,
@@ -51,7 +51,7 @@ class StudentController extends CI_Controller {
             $this->load->model('studentmodel');
             $this->studentmodel->addStudent($record);
             $data['records'] = $this->studentmodel->getStudent();
-            $this->load->view('student', $data);
+            $this->load->view('www/page/student', $data);
         }
     }
 
@@ -62,7 +62,7 @@ class StudentController extends CI_Controller {
         $this->studentmodel->deleteStudent($sID);
         $data['records'] = $this->studentmodel->getStudent();
         
-        $this->load->view('student', $data);  
+        $this->load->view('www/page/student', $data);  
     }    
     
     public function loadStudent() {
@@ -71,7 +71,7 @@ class StudentController extends CI_Controller {
         
         $data['records'] = $this->studentmodel->selectStudent($sID);
         
-        $this->load->view('student_Modify', $data); 
+        $this->load->view('www/page/student_Modify', $data); 
     }
     
     public function modifyStudent() {
@@ -116,7 +116,7 @@ class StudentController extends CI_Controller {
         $this->load->model('studentmodel');
         $this->studentmodel->modifyStudent($record, $sID);
         $data['records'] = $this->studentmodel->getStudent();
-        $this->load->view('student', $data);
+        $this->load->view('www/page/student', $data);
     }
     
     public function exportStudent() {
@@ -145,7 +145,7 @@ class StudentController extends CI_Controller {
         $data['records'] = $this->studentmodel->getStudent();
         $data['queryData'] = $this->studentmodel->getQueryData();
         
-        $this->load->view('student', $data);
+        $this->load->view('www/page/student', $data);
     }
     
     public function selectStudentByCompany() {
@@ -154,7 +154,7 @@ class StudentController extends CI_Controller {
         $data['records'] = $this->studentmodel->selectStudentByCompany($company);
         $data['queryData'] = $this->studentmodel->getQueryData();
         
-        $this->load->view('student', $data);
+        $this->load->view('www/page/student', $data);
     }
     
     public function selectStudentBySName() {
@@ -163,6 +163,6 @@ class StudentController extends CI_Controller {
         $data['records'] = $this->studentmodel->selectStudentBySName($sName);
         $data['queryData'] = $this->studentmodel->getQueryData();
         
-        $this->load->view('student', $data);
+        $this->load->view('www/page/student', $data);
     }
 };

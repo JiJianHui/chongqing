@@ -234,6 +234,10 @@ and open the template in the editor.
     background-color: white;
 }
 
+.addNewProblemForm .short{
+    width: 100px;
+}
+
 .addNewProblemForm .Long{
     width:770px;
 }
@@ -247,6 +251,10 @@ and open the template in the editor.
     margin-bottom:10px;
 }
 
+.addNewProblemForm .middleWide{
+    margin-top: 30px;
+}
+
 .addNewProblemForm textArea{
     background-color: white;
     display: inline;
@@ -256,3 +264,6 @@ and open the template in the editor.
 .errorInfo{
     color: red;
 }
+
+
+/*.....创新人才管理页面css控制............*/
