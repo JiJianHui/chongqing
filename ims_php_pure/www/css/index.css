@@ -252,3 +252,7 @@ and open the template in the editor.
     display: inline;
     margin-right: 0px;
 }
+
+.errorInfo{
+    color: red;
+}

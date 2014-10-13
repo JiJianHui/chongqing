@@ -2,16 +2,20 @@
 <!--
 这个是通用的网页模板，需要注意。该模板定义了一个完整的网页需要包含的部分。
 -->
+<?php 
+    chdir( dirname(__FILE__) );
+?>
+
 <html>
     <head>
         <title>登陆系统</title>
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-	<script src="./www/js/jquery1.83.js"></script>
-        <link rel="stylesheet" type="text/css" href="./www/css/layout.css" media="screen, projection, tv " />
-        <link rel="stylesheet" type="text/css" href="./www/css/html.css" media="screen, projection, tv " />
-        <link rel="stylesheet" type="text/css" href="./www/css/index.css" media="screen, projection, tv " />
-        <link href="./www/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<script src="<?php echo base_url()?>www/js/jquery1.83.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/layout.css" media="screen, projection, tv " />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/html.css" media="screen, projection, tv " />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/index.css" media="screen, projection, tv " />
+        <link href="<?php echo base_url()?>www/css/bootstrap.css" rel="stylesheet" type="text/css" />
         
         <script type="text/javascript">
             $(document).ready(function() {
@@ -49,13 +53,10 @@
             ?>
                 <input type = "hidden" name = "submited" value = "true"/>
                 <div class="updateLine loginTitle text">
-                    请首先登录后台信息管理系统...
-                    <?php
-                    if (empty($errorInformation) == FALSE) {
-                        echo $erroInformation;
-                    }
-                    ?>
+                    请首先登录后台信息管理系统...                  
                 </div>
+                
+                
                 <div class="updateLine">
                     <span class="text">邮箱：<span class="warning warningNickName" id="warningEmail">*</span></span>
                     <input type="text" name="username" id="loginEmail" class="form-control input" placeholder="输入邮箱" />
@@ -67,6 +68,13 @@
                 </div>
 
                 <div class="updateLine" style="margin-top: 25px; ">
+                    <span class="errorInfo">
+                    <?php
+                    if (empty($errorInformation) == FALSE) {
+                        echo $errorInformation;
+                    }
+                    ?>
+                </span>
                     <input type="submit" class="btn btn-primary btn-success" id="lgbtn" value="登陆" onclick="return checkLoginForm()"/>
                 </div>
 

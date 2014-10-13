@@ -20,12 +20,12 @@ class LoginController extends CI_Controller {
   
         switch($res) {
             case -1: // User doesn't exist
-                $data['errorInformation'] = 'User doesn\'t exist';
-                $this->load->view('login', $data);
+                $data['errorInformation'] = '账号不存在！！！';
+                $this->load->view('www/page/login', $data);
                 break;
             case 0: // Password is wrong
-                $data['errorInformation'] = 'Password is wrong';
-                $this->load->view('login', $data);
+                $data['errorInformation'] = '密码错误！！！';
+                $this->load->view('www/page/login', $data);
                 break;
             case 1: // Both are correct
                 $this->load->view('home');
