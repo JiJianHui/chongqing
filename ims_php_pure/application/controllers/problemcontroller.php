@@ -60,7 +60,7 @@ class ProblemController extends CI_Controller {
         $this->problemmodel->deleteProblem($pID);
         $data['records'] = $this->problemmodel->getProblem();
         
-        $this->load->view('problem', $data);  
+        $this->load->view('www/page/problem', $data);  
     }    
     
     public function loadProblem() {
@@ -69,7 +69,7 @@ class ProblemController extends CI_Controller {
         
         $data['records'] = $this->problemmodel->selectProblem($pID);
         
-        $this->load->view('problem_Modify', $data); 
+        $this->load->view('www/page/problem_Modify', $data); 
     }
     
     public function modifyProblem() {
@@ -121,7 +121,7 @@ class ProblemController extends CI_Controller {
             $this->problemmodel->modifyProblem($record, $pID);
             
             $data['records'] = $this->problemmodel->getProblem();
-            $this->load->view('problem', $data);
+            $this->load->view('www/page/problem', $data);
     }
     
     public function exportProblem() {
@@ -185,7 +185,7 @@ class ProblemController extends CI_Controller {
         $data['records'] = $this->problemmodel->selectProblemByEName($eName);
         $data['queryData'] = $this->problemmodel->getQueryData();
         
-        $this->load->view('problem', $data);
+        $this->load->view('www/page/problem', $data);
     }
     
     public function selectProblemByPCategory() {
@@ -194,7 +194,7 @@ class ProblemController extends CI_Controller {
         $data['records'] = $this->problemmodel->selectProblemByPCategory($pCategory);
         $data['queryData'] = $this->problemmodel->getQueryData();
         
-        $this->load->view('problem', $data);
+        $this->load->view('www/page/problem', $data);
     }
     
     public function selectProblemByContactName() {
@@ -203,6 +203,6 @@ class ProblemController extends CI_Controller {
         $data['records'] = $this->problemmodel->selectProblemByContactName($contactName);
         $data['queryData'] = $this->problemmodel->getQueryData();
         
-        $this->load->view('problem', $data);
+        $this->load->view('www/page/problem', $data);
     }
 };
