@@ -4,7 +4,7 @@ class CaseController extends CI_Controller {
         $isFirst = $this->input->get('isFirst', true);
         
         if(empty($isFirst) == FALSE) {
-            $this->load->view('case_Add');
+            $this->load->view('www/page/case_Add');
         } else {
             $department = $_POST['department'];
             $sector = $_POST['sector'];
@@ -41,7 +41,7 @@ class CaseController extends CI_Controller {
             $this->load->model('casemodel');
             $this->casemodel->addCase($record);
             $data['records'] = $this->casemodel->getCase();
-            $this->load->view('case', $data);
+            $this->load->view('www/page/case', $data);
         }
     }
 
@@ -52,7 +52,7 @@ class CaseController extends CI_Controller {
         $this->casemodel->deleteCase($cID);
         $data['records'] = $this->casemodel->getCase();
         
-        $this->load->view('case', $data);  
+        $this->load->view('www/page/case', $data);  
     }    
     
     public function loadCase() {
@@ -61,7 +61,7 @@ class CaseController extends CI_Controller {
         
         $data['records'] = $this->casemodel->selectCase($sID);
         
-        $this->load->view('case_Modify', $data); 
+        $this->load->view('www/page/case_Modify', $data); 
     }
     
     public function modifyCase() {
@@ -102,7 +102,7 @@ class CaseController extends CI_Controller {
         $this->load->model('casemodel');
         $this->casemodel->modifyCase($record, $cID);
         $data['records'] = $this->casemodel->getCase();
-        $this->load->view('case', $data);
+        $this->load->view('www/page/case', $data);
     }
     
     public function exportCase() {
@@ -131,7 +131,7 @@ class CaseController extends CI_Controller {
         $data['records'] = $this->casemodel->getCase();
         $data['queryData'] = $this->casemodel->getQueryData();
         
-        $this->load->view('case', $data);
+        $this->load->view('www/page/case', $data);
     }
     
     public function selectCaseByDepartment() {
@@ -140,6 +140,6 @@ class CaseController extends CI_Controller {
         $data['records'] = $this->casemodel->selectCaseByDepartment($department);
         $data['queryData'] = $this->casemodel->getQueryData();
         
-        $this->load->view('case', $data);
+        $this->load->view('www/page/case', $data);
     }
 };
