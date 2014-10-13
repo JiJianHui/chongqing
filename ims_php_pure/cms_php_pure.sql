@@ -39,22 +39,27 @@ CREATE TABLE Problem (
 
 CREATE TABLE ICase(
        cID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-       department VARCHAR(100) DEFAULT NULL,
-       sector VARCHAR(100) DEFAULT NULL,
-       category VARCHAR(100) DEFAULT NULL,
+       title VARCHAR(100) DEFAULT NULL,
+       eName VARCHAR(100) DEFAULT NULL,
+       eCategory VARCHAR(100) DEFAULT NULL,
+       eAddress VARCHAR(100) DEFAULT NULL,
+       ePostCode VARCHAR(100) DEFAULT NULL,
+       eContact VARCHAR(100) DEFAULT NULL,
+
        mobilePhone VARCHAR(20) DEFAULT NULL,
+       telePhone VARCHAR(20) DEFAULT NULL,
        faxNumber VARCHAR(20) DEFAULT NULL, 
        eMail VARCHAR(100) DEFAULT NULL,
        qq VARCHAR(20) DEFAULT NULL,
+       mainProducts VARCHAR(100) DEFAULT NULL,
 
-       title VARCHAR(100)  DEFAULT NULL,
-       abstract VARCHAR(100) DEFAULT NULL,
-       description VARCHAR(100) DEFAULT NULL,
-       course VARCHAR(100) DEFAULT NULL,
-       cSolution VARCHAR(100) DEFAULT NULL,
-       sEmployed VARCHAR(100) DEFAULT NULL,
-       sImplementation VARCHAR(100) DEFAULT NULL
-       #FOREIGN KEY (providerID) REFERENCES ProviderInformation(providerID)
+       abstract VARCHAR(1000) DEFAULT NULL,
+       description VARCHAR(1000) DEFAULT NULL,
+       course VARCHAR(1000) DEFAULT NULL,
+       cSolution VARCHAR(1000) DEFAULT NULL,
+       sEmployed VARCHAR(1000) DEFAULT NULL,
+       sImplementation VARCHAR(1000) DEFAULT NULL,
+       sRemark VARCHAR(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -99,11 +104,11 @@ CREATE TABLE Student (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE Administrator (
-       aName VARCHAR(50) DEFAULT NULL,
-       aPassword VARCHAR(50) DEFAULT NULL
+CREATE TABLE Users (
+       eMail VARCHAR(50) DEFAULT NULL,
+       passWord  VARCHAR(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO Adminstrator(aName, aPassword) VALUES (
-       ('root', '1234')
+INSERT INTO Users(eMail, passWord) VALUES (
+       'root@qq.com', '1234'
 );
