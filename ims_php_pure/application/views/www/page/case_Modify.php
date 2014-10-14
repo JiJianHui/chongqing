@@ -43,28 +43,28 @@
                 <div class="info">
                     <div class="title">项目概要</div>
                     <div class="infoLine">
-                        <span>案例题目：</span><textarea name="title" rows="5" class="form-control Long"></textarea>
+                        <span>案例题目：</span><textarea name="title" rows="5" class="form-control Long" value="<?php echo $records[0]->title ?>"><?php echo $records[0]->title ?></textarea>
                     </div>
                     <div class="infoLine">
-                        <span>案例概要：</span><textarea name="abstract" rows="5" class="form-control Long"></textarea>
+                        <span>案例概要：</span><textarea name="abstract" rows="5" class="form-control Long" value="<?php echo $records[0]->abstract ?>"><?php echo $records[0]->abstract ?></textarea>
                     </div>
                     <div class="infoLine middleWide"></div>
                     <div class="infoLine">
-                        <span>案例描述：</span><textarea name="description" rows="5" class="form-control Long"></textarea>
+                        <span>案例描述：</span><textarea name="description" rows="5" class="form-control Long" value="<?php echo $records[0]->description ?>"><?php echo $records[0]->description ?></textarea>
                     </div>
                     
                     <div  class="infoLine">
-                        <span>解题过程：</span><textarea name="course" rows="5" class="form-control Long"></textarea>
+                        <span>解题过程：</span><textarea name="course" rows="5" class="form-control Long" value="<?php echo $records[0]->course ?>"><?php echo $records[0]->course ?></textarea>
                     </div>
                     <div class="infoLine  middleWide">
-                        <span>概念方案：</span><textarea name="cSolution" rows="5" class="form-control Long"></textarea>
+                        <span>概念方案：</span><textarea name="cSolution" rows="5" class="form-control Long" value="<?php echo $records[0]->cSolution ?>"><?php echo $records[0]->cSolution ?></textarea>
                     </div>
                     <div class="infoLine">
-                        <span>采用方案：</span><textarea name="sEmployed" rows="5" class="form-control Long"></textarea>
+                        <span>采用方案：</span><textarea name="sEmployed" rows="5" class="form-control Long" value="<?php echo $records[0]->sEmployed ?>"><?php echo $records[0]->sEmployed ?></textarea>
                     </div>
                     
                     <div class="infoLine middleWide">
-                        <span>方案实现：</span><textarea name="sImplementation" rows="5" class="form-control Long"></textarea>
+                        <span>方案实现：</span><textarea name="sImplementation" rows="5" class="form-control Long" value="<?php echo $records[0]->sImplementation ?>"></textarea>
                     </div>
                     
                 </div>

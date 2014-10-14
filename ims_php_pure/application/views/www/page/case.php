@@ -56,31 +56,36 @@
                 <table class="recordTables">
                     <tr>
                         <th  class="shortTD">案例ID</th>
+                        <!--
                         <th class="MiddleTD">department</th>
                         <th class="MiddleTD">sector</th>
                         <th class="MiddleTD">类别</th>
                         <th class="tinyTD">手机</th>
                         <!--<th class="MiddleTD">传真</th>-->
-                        <th class="MiddleTD">email</th>
+                        <th class="MiddleTD">title</th>
+                        <th class="MiddleTD">abstract</th>
+                        <th class="MiddleTD">cSolution</th>
+                        <th class="MiddleTD">sEmployed</th>
+                        <th class="MiddleTD">sImplementation</th>
                         <!--<th class="MiddleTD">qq</th>-->
                         <th class="editCol">操作</th>
                     </tr>
                     <?php
                         foreach($records as $rec) { 
                             $modifyURL = site_url('casecontroller/loadCase?cID=').$rec->cID;
-                            $deleteURL = site_url('casecontroller/deleteStudent?cID=').$rec->cID;
-                            $exportURL = site_url('casecontroller/exportStudent?cID=').$rec->cID;
+                            $deleteURL = site_url('casecontroller/deleteCase?cID=').$rec->cID;
+                            $exportURL = site_url('casecontroller/exportCase?cID=').$rec->cID;
                             $export2pdfURL = site_url('casecontroller/pdf?cID=').$rec->cID;
-                            $importURL = site_url('casecontroller/exportStudent?cID=').$rec->cID;
+                            $importURL = site_url('casecontroller/exportCase?cID=').$rec->cID;
                         ?>
                     <tr>
                         <td class="shortTD"><?php echo $rec->cID ?></td>
-                        <td class="MiddleTD" title="<?php echo $rec->department ?>"><?php echo $rec->department ?></td>
-                        <td class="MiddleTD" title='<?php echo $rec->sector ?>'><?php echo $rec->sector ?></td>
-                        <td class="MiddleTD"><?php echo $rec->category ?></td>
-                        <td class="tinyTD"><?php echo $rec->mobilePhone ?></td>
+                        <td class="MiddleTD" title="<?php echo $rec->department ?>"><?php echo $rec->title ?></td>
+                        <td class="MiddleTD" title='<?php echo $rec->sector ?>'><?php echo $rec->abstract ?></td>
+                        <td class="MiddleTD"><?php echo $rec->cSolution ?></td>
+                        <td class="tinyTD"><?php echo $rec->sEmployed ?></td>
                         <!--<td class="MiddleTD"><?php // echo $rec->faxNumber ?></td>-->
-                        <td class="MiddleTD"><?php echo $rec->email ?></td>
+                        <td class="MiddleTD"><?php echo $rec->sImplementation ?></td>
                         <!--<td class="MiddleTD" title="php // echo $rec->qq ?>">php echo $rec->qq ?></td>-->
 
                         <td class="editCol"><a href = "<?php print $deleteURL?>" onclick="alert();">删除</a>
