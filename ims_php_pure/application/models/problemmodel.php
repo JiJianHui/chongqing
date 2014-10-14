@@ -27,7 +27,7 @@ class ProblemModel extends CI_Model {
         $queryData['queryEName'] = $query->result();
         $query = $this->db->query('SELECT DISTINCT pCategory FROM Problem');
         $queryData['queryCategory'] = $query->result();
-        $query = $this->db->query('SELECT DISTINCT contactName FROM Problem');
+        $query = $this->db->query('SELECT DISTINCT cName FROM Problem');
         $queryData['queryCName'] = $query->result();
          
         return $queryData; 
