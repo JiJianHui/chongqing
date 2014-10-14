@@ -16,36 +16,36 @@ class StudentController extends CI_Controller {
             $sSex = $_POST['sSex'];
             $startWorkTime = $_POST['startWorkTime'];
             $birthday = $_POST['birthday'];
-//            $cMajor = $_POST['cMajor'];                        
+            $cMajor = $_POST['major'];                        
             $eTitle = $_POST['eTitle'];
             $company = $_POST['company'];
             $department = $_POST['department'];
             $telePhone = $_POST['telePhone'];
             $mobilePhone = $_POST['mobilePhone'];
-            $eMail = $_POST['eMail'];
-            $qq = $_POST['qq'];
+            $eMail_qq = $_POST['eMail'];
             $address = $_POST['address'];
             $education = $_POST['education'];
-            $gSchool = $_POST['graduateSchool'];
+            $gSchool = $_POST['gSchool'];
             $major = $_POST['major'];
- 
+            //$faxNumber = $_POST['faxNumber'];
+            
             $record = array(
                 'sName' => $sName,
                 'sSex' => $sSex,
                 'startWorkTime' => $startWorkTime,
                 'birthday' => $birthday,
-//                'cMajor' => $cMajor,
+                'cMajor' => $cMajor,
                 'eTitle' => $eTitle,
                 'company' => $company,
                 'department' => $department,
                 'telePhone' => $telePhone,
                 'mobilePhone' => $mobilePhone,
-                'eMail' => $eMail,
-                'qq' => $qq,
+                'eMail_qq' => $eMail_qq,
                 'address' => $address,
-                'education' => $education,
-                'gSchool' => $gSchool,
-                'major' => $major,
+                //'faxNumber' => $faxNumber,
+                'cMajor' => $major,
+                'degree1' => $education,
+                'gSchool1' => $gSchool
             );
             
             $this->load->model('studentmodel');

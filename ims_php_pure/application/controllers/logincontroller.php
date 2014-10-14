@@ -29,9 +29,12 @@ class LoginController extends CI_Controller {
                 break;
             case 1: // Both are correct
                 //$this->load->view('home');
+  
+                
                 $this->load->model('problemmodel');
                 $data['records'] = $this->problemmodel->getProblem();
                 $data['queryData'] = $this->problemmodel->getQueryData();
+                
                 $this->load->view('www/page/problem', $data);
 
                 //Print_r($data['queryData']['queryCName']);

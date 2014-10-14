@@ -79,43 +79,41 @@ class ProblemController extends CI_Controller {
             $eName = $_POST['eName'];
             $eCategory = $_POST['eCategory'];
             $eAddress = $_POST['eAddress'];
-            $ePostCode = $_POST['ePostCode'];
+            $postCode = $_POST['ePostCode'];
             $contact = $_POST['contact'];                        
             $mobilePhone = $_POST['mobilePhone'];
-            $telePhone = $_POST['telePhone'];
+            $phone = $_POST['mobilePhone'];
             $faxNumber = $_POST['faxNumber'];
             $eMail = $_POST['eMail'];
-            
             $qq = $_POST['qq'];
             $mainProducts = $_POST['mainProducts'];
             $pName = $_POST['pName'];
             $pCategory = $_POST['pCategory'];
-            $contactName = $_POST['contactName'];
-            //$phone2 = $_POST['phone2'];
-            $pFaxNumber = $_POST['pFaxNumber'];
-            $bgDescription = $_POST['bgDescription'];
-            $pDescription = $_POST['pDescription'];
+            $principal = $_POST['contact'];
+            $phone2 = $_POST['telePhone'];
+            $faxNumber2 = $_POST['faxNumber'];
+            $background = $_POST['bgDescription'];
+            $description = $_POST['pDescription'];
             
  
             $record = array(
                 'eName' => $eName,
                 'eCategory' => $eCategory,
                 'eAddress' => $eAddress,
-                'ePostCode' => $ePostCode,
+                'ePostCode' => $postCode,
                 'contact' => $contact,
                 'mobilePhone' => $mobilePhone,
-                'telePhone' => $telePhone,
+                'telePhone' => $phone,
                 'faxNumber' => $faxNumber,
                 'eMail' => $eMail,
-                'qq' => $qq,    
-                'mainProducts' => $mainProducts,
+                'qq' => $qq,
                 'pName' => $pName,
                 'pCategory' => $pCategory,
-                'contactName' => $contactName,
-                //'phone2' => $phone2,
-                'pFaxNumber' => $pFaxNumber,
-                'bgDescription' => $bgDescription,
-                'pDescription' => $pDescription,
+                'cName' => $principal,
+                'cTelePhone' => $phone2,
+                'pFaxNumber' => $faxNumber2,
+                'bgDescription' => $background,
+                'pDescription' => $description,
             );
             
             $this->load->model('problemmodel');

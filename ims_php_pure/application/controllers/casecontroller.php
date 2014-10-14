@@ -6,13 +6,13 @@ class CaseController extends CI_Controller {
         if(empty($isFirst) == FALSE) {
             $this->load->view('www/page/case_Add');
         } else {
-            $department = $_POST['department'];
+            /*$department = $_POST['department'];
             $sector = $_POST['sector'];
             $category = $_POST['category'];
             $mobilePhone = $_POST['mobilePhone'];
             $faxNumber = $_POST['faxNumber'];                        
             $eMail = $_POST['eMail'];
-            $qq = $_POST['qq'];
+            $qq = $_POST['qq'];*/
             $title = $_POST['title'];
             $abstract = $_POST['abstract'];
             $description = $_POST['description'];
@@ -22,13 +22,13 @@ class CaseController extends CI_Controller {
             $sImplementation = $_POST['sImplementation'];
  
             $record = array(
-                'department' => $department,
+                /*'department' => $department,
                 'sector' => $sector,
                 'category' => $category,
                 'mobilePhone' => $mobilePhone,
                 'faxNumber' => $faxNumber,
                 'eMail' => $eMail,
-                'qq' => $qq,
+                'qq' => $qq,*/
                 'title' => $title,
                 'abstract' => $abstract,
                 'description' => $description,
@@ -47,7 +47,7 @@ class CaseController extends CI_Controller {
 
     public function deleteCase() {
         $this->load->model('casemodel');
-        $sID = $this->input->get('cID', true);
+        $cID = $this->input->get('cID', true);
         
         $this->casemodel->deleteCase($cID);
         $data['records'] = $this->casemodel->getCase();
@@ -57,9 +57,9 @@ class CaseController extends CI_Controller {
     
     public function loadCase() {
         $this->load->model('casemodel');
-        $sID = $this->input->get('sID', true);
+        $cID = $this->input->get('cID', true);
         
-        $data['records'] = $this->casemodel->selectCase($sID);
+        $data['records'] = $this->casemodel->selectCase($cID);
         
         $this->load->view('www/page/case_Modify', $data); 
     }
