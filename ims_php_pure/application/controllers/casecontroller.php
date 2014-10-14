@@ -60,14 +60,14 @@ class CaseController extends CI_Controller {
         $cID = $this->input->get('cID', true);
         
         $data['records'] = $this->casemodel->selectCase($cID);
-        
+        /*Modified*/
         $this->load->view('www/page/case_Modify', $data); 
     }
     
     public function modifyCase() {
         $sID = $_POST['cID'];
         
-        $department = $_POST['department'];
+        $department = $_POST['department']; 
         $sector = $_POST['sector'];
         $category = $_POST['category'];
         $mobilePhone = $_POST['mobilePhone'];
