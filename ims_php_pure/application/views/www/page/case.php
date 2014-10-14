@@ -64,9 +64,9 @@
                         <!--<th class="MiddleTD">传真</th>-->
                         <th class="MiddleTD">title</th>
                         <th class="MiddleTD">abstract</th>
-                        <th class="MiddleTD">cSolution</th>
-                        <th class="MiddleTD">sEmployed</th>
-                        <th class="MiddleTD">sImplementation</th>
+                        <th class="tinyTD">cSolution</th>
+                        <th class="tinyTD">sEmployed</th>
+                        <th class="tinyTD">sImplementation</th>
                         <!--<th Modified class="MiddleTD">qq</th>-->
                         <th class="editCol">操作</th>
                     </tr>
@@ -80,15 +80,15 @@
                         ?>
                     <tr>
                         <td class="shortTD"><?php echo $rec->cID ?></td>
-                        <td class="MiddleTD" title="<?php echo $rec->department ?>"><?php echo $rec->title ?></td>
-                        <td class="MiddleTD" title='<?php echo $rec->sector ?>'><?php echo $rec->abstract ?></td>
-                        <td class="MiddleTD"><?php echo $rec->cSolution ?></td>
+                        <td class="MiddleTD" title="<?php echo $rec->title ?>"><?php echo $rec->title ?></td>
+                        <td class="tinyTD" title='<?php echo $rec->abstract ?>'><?php echo $rec->abstract ?></td>
+                        <td class="tinyTD"><?php echo $rec->cSolution ?></td>
                         <td class="tinyTD"><?php echo $rec->sEmployed ?></td>
                         <!--<td class="MiddleTD"><?php // echo $rec->faxNumber ?></td>-->
                         <td class="MiddleTD"><?php echo $rec->sImplementation ?></td>
                         <!--<td class="MiddleTD" title="php // echo $rec->qq ?>">php echo $rec->qq ?></td>-->
 
-                        <td class="editCol"><a href = "<?php print $deleteURL?>" onclick="alert();">删除</a>
+                        <td class="editCol"><a href = "<?php print $deleteURL?>" onclick="return confirm('确定删除?');">删除</a>
                         <a href = "<?php print $modifyURL?>">修改</a> 
                         <a href = "<?php print $exportURL?>">导出word</a>
                         <a href = "<?php print $export2pdfURL?>">导出pdf</a> 

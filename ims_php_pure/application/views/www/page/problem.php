@@ -112,7 +112,7 @@
                         <!--<td class="MiddleTD">php echo $rec->bgDescription ?></td>-->
                         <td class="MiddleTD" title="<?php echo $rec->pDescription ?>"><?php echo $rec->pDescription ?></td>
 
-                        <td class="editCol"><a href = "<?php print $deleteURL?>" onclick="alert();">删除</a>
+                        <td class="editCol"><a href = "<?php print $deleteURL?>" onclick="return confirm('确定删除?');">删除</a>
                         <a href = "<?php print $modifyURL?>">修改</a> 
                         <a href = "<?php print $exportURL?>">导出word</a>
                         <a href = "<?php print $export2pdfURL?>">导出pdf</a> 
