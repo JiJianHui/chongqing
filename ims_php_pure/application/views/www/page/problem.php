@@ -34,7 +34,7 @@
         </div>
         <div id="content" class="width">
 
-            <!------------------搜索界面--------------------->
+                        <!------------------搜索界面--------------------->
             <div class="searchAreas">
                 <!--按照名字搜索-->
                 <div class="searchLine">
@@ -64,15 +64,15 @@
                     <?php echo form_close(); ?>
                 </div>
                 
-                <!--按照联系人搜索-->
+                                                <!--按照联系人搜索-->
                 <div class="searchLine">
                     <span class="searchTitle">Search By Contact Name: </span>
                     <?php 
-                    $attributes = ['class' => 'form-horizontal', 'id' => 'searchByContactForm'];
+                    $attributes = array('class' => 'form-horizontal', 'id' => 'searchByContactForm');
                     echo form_open('problemcontroller/selectProblemByContactName', $attributes); 
                     ?>
                         <select name = "queryContactName">
-                            <?php  foreach($queryData['queryCName'] as $item) { echo "<option value =".$item->contactName." >".$item->contactName; } ?>
+                            <?php  foreach($queryData['queryCName'] as $item) { echo "<option value =".$item->cName." >".$item->cName; } ?>
                         </select>
                         <input type= "submit" value="Ok" class="btn btn-primary btn-success"/>
                     <?php echo form_close(); ?>
