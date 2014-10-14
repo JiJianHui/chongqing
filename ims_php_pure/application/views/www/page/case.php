@@ -44,7 +44,7 @@
                     echo form_open('casecontroller/selectCaseByDepartment', $attributes); 
                     ?>
                         <select name = "queryDepartment">
-                            <?php foreach($queryData['queryDepartment'] as $item) { echo "<option value =".$item->department." >".$item->department; } ?>
+                            <?php foreach($queryData['queryDepartment'] as $item) { echo "<option value =".$item->eName." >".$item->eName; } ?>
                         </select>
                         <input type= "submit" value="Ok" class="btn btn-primary btn-success"/>
                     <?php echo form_close(); ?>
