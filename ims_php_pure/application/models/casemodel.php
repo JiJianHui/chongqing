@@ -27,7 +27,7 @@ class casemodel extends CI_Model {
     }
     
     public function getQueryData() {
-        $query = $this->db->query('SELECT DISTINCT department FROM ICase');
+        $query = $this->db->query('SELECT DISTINCT eName FROM ICase');
         $queryData['queryDepartment'] = $query->result();
         /*$query = $this->db->query('SELECT DISTINCT eName FROM Problem');
         $queryData['queryEName'] = $query->result();
