@@ -60,7 +60,7 @@ class CaseController extends CI_Controller {
         $cID = $this->input->get('cID', true);
         
         $data['records'] = $this->casemodel->selectCase($cID);
-        /*Modified*/
+        /*Modified Modified */
         $this->load->view('www/page/case_Modify', $data); 
     }
     

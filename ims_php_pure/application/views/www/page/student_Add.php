@@ -50,7 +50,7 @@
                     
                     <div  class="infoLine">
                         
-                        <span>毕业院校：</span><input type = "text" name = "graduateSchool" class="form-control">
+                        <span>毕业院校：</span><input type = "text" name = "gSchool" class="form-control">
                         <span>学历：</span><input type = "text" name = "education" class="form-control">
                         <span>专业：</span><input type = "text" name = "major" class="form-control">
                         

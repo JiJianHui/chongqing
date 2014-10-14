@@ -10,7 +10,7 @@
     <head>
         <title>登陆系统</title>
         <meta charset="UTF-8">
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">Modified-->
 	<script src="<?php echo base_url()?>www/js/jquery1.83.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/layout.css" media="screen, projection, tv " />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/html.css" media="screen, projection, tv " />

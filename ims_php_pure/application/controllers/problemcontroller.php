@@ -60,7 +60,7 @@ class ProblemController extends CI_Controller {
         
         $this->problemmodel->deleteProblem($pID);
         $data['records'] = $this->problemmodel->getProblem();
-        /*Push problemController.php */
+        /*Push problemController.php Modified */
         $this->load->view('www/page/problem', $data);  
     }    
     

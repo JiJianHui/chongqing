@@ -24,7 +24,7 @@
     </head>
     
     <body>
-        <!--<div id="header" class="width"></div>-->
+        <!--<div id="header" class="width">Modified</div>-->
         <div id="headerImg" class="width">公司技术信息后台管理系统</div>
         <div id="menu" class="width">   
             <?php 

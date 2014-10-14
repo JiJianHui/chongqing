@@ -28,7 +28,7 @@ class StudentController extends CI_Controller {
             $gSchool = $_POST['gSchool'];
             $major = $_POST['major'];
             //$faxNumber = $_POST['faxNumber'];
-            
+            /*Modified StudentController*/
             $record = array(
                 'sName' => $sName,
                 'sSex' => $sSex,

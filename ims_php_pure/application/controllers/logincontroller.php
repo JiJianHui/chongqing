@@ -9,7 +9,7 @@ class LoginController extends CI_Controller {
     public function index() {
         $this->load->view('www/page/login');
     }
-    
+    /*Modified*/
     public function login() {
         $username = $this->input->post('username');
         $password = $this->input->post('user_password');
