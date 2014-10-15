@@ -25,7 +25,7 @@
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">创新人才数据库-重庆市创新方法</div>
+        <div id="headerImg" class="width">创新人才数据库</div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );

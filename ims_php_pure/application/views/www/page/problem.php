@@ -25,7 +25,7 @@
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">技术难题数据库-重庆市创新方法</div>
+        <div id="headerImg" class="width">技术难题数据库</div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );
@@ -38,7 +38,7 @@
             <div class="searchAreas">
                 <!--按照名字搜索-->
                 <div class="searchLine">
-                    <span class="searchTitle">Search By Name: </span>
+                    <span class="searchTitle">按照名字搜索: </span>
                     <?php 
                     $attributes = array('class' => 'form-horizontal', 'id' => 'searchByNameForm');
                     echo form_open('problemcontroller/selectProblemByEName', $attributes); 
@@ -52,7 +52,7 @@
                 
                 <!--按照类别搜索-->
                 <div class="searchLine">
-                    <span class="searchTitle">Search By Category:</span>
+                    <span class="searchTitle">按照类别搜索:</span>
                     <?php 
                     $attributes = array('class' => 'form-horizontal', 'id' => 'searchByCategoryForm');
                     echo form_open('problemcontroller/selectProblemByPCategory', $attributes); 
@@ -64,9 +64,9 @@
                     <?php echo form_close(); ?>
                 </div>
                 
-                                                <!--按照联系人搜索-->
+                <!--按照联系人搜索-->
                 <div class="searchLine">
-                    <span class="searchTitle">Search By Contact Name: </span>
+                    <span class="searchTitle">按照联系人搜索: </span>
                     <?php 
                     $attributes = array('class' => 'form-horizontal', 'id' => 'searchByContactForm');
                     echo form_open('problemcontroller/selectProblemByContactName', $attributes); 

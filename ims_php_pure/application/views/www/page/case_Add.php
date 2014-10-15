@@ -25,7 +25,7 @@
     
     <body>
         <!--<div id="header" class="width">Modified</div>-->
-        <div id="headerImg" class="width">创新案例数据库-重庆市创新方法</div>
+        <div id="headerImg" class="width">创新案例数据库</div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );

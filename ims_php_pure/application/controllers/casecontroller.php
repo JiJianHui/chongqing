@@ -41,6 +41,7 @@ class CaseController extends CI_Controller {
             $this->load->model('casemodel');
             $this->casemodel->addCase($record);
             $data['records'] = $this->casemodel->getCase();
+            $data['queryData'] = $this->casemodel->getQueryData();
             $this->load->view('www/page/case', $data);
         }
     }
@@ -102,6 +103,7 @@ class CaseController extends CI_Controller {
         $this->load->model('casemodel');
         $this->casemodel->modifyCase($record, $cID);
         $data['records'] = $this->casemodel->getCase();
+        $data['queryData'] = $this->casemodel->getQueryData();
         $this->load->view('www/page/case', $data);
     }
     

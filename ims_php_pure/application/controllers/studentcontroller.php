@@ -51,6 +51,7 @@ class StudentController extends CI_Controller {
             $this->load->model('studentmodel');
             $this->studentmodel->addStudent($record);
             $data['records'] = $this->studentmodel->getStudent();
+            $data['queryData'] = $this->studentmodel->getQueryData();
             $this->load->view('www/page/student', $data);
         }
     }
@@ -61,7 +62,7 @@ class StudentController extends CI_Controller {
         
         $this->studentmodel->deleteStudent($sID);
         $data['records'] = $this->studentmodel->getStudent();
-        
+        $data['queryData'] = $this->studentmodel->getQueryData();
         $this->load->view('www/page/student', $data);  
     }    
     
@@ -116,6 +117,7 @@ class StudentController extends CI_Controller {
         $this->load->model('studentmodel');
         $this->studentmodel->modifyStudent($record, $sID);
         $data['records'] = $this->studentmodel->getStudent();
+        $data['queryData'] = $this->studentmodel->getQueryData();
         $this->load->view('www/page/student', $data);
     }
     
