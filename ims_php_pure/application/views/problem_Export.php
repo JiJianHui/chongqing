@@ -15,7 +15,7 @@ header("content-disposition: attachment; filename=sampleword.doc");
 传真: <?php echo $records[0]->faxNumber ?><pr>
 EMail: <?php echo $records[0]->eMail ?><pr>
 qq: <?php echo $records[0]->qq  ?><pr>
-主要产品: <?phpe echo $records[0]->mainProducts  ?><pr>
+主要产品: <?php echo $records[0]->mainProducts  ?><pr>
 问题名称: <?php echo $records[0]->pName ?><pr>       
 领域: <?php echo $records[0]->pCategory ?><pr>
 联系人: <?php echo $records[0]->cName ?><pr>
