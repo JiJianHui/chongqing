@@ -4,7 +4,7 @@
 -->
 <html>
     <head>
-        <title>创新人才</title>
+        <title>添加创新人才</title>
 
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
@@ -25,7 +25,7 @@
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">公司技术信息后台管理系统</div>
+        <div id="headerImg" class="width">创新人才数据库-重庆市创新方法</div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );
