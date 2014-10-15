@@ -25,7 +25,7 @@
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">技术难题数据库</div>
+        <div id="headerImg" class="width">企业技术难题数据库</div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );

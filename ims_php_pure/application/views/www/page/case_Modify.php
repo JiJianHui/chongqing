@@ -4,7 +4,7 @@
 -->
 <html>
     <head>
-        <title>修改创新技术案例</title>
+        <title>创新案例数据库</title>
 
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
