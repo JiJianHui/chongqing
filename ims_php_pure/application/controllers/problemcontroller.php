@@ -50,6 +50,7 @@ class ProblemController extends CI_Controller {
             $this->load->model('problemmodel');
             $this->problemmodel->addProblem($record);
             $data['records'] = $this->problemmodel->getProblem();
+            $data['queryData'] = $this->problemmodel->getQueryData();
             $this->load->view('www/page/problem', $data);
         }
     }
@@ -60,6 +61,7 @@ class ProblemController extends CI_Controller {
         
         $this->problemmodel->deleteProblem($pID);
         $data['records'] = $this->problemmodel->getProblem();
+        $data['queryData'] = $this->problemmodel->getQueryData();
         /*Push problemController.php Modified */
         $this->load->view('www/page/problem', $data);  
     }    
@@ -120,6 +122,7 @@ class ProblemController extends CI_Controller {
             $this->problemmodel->modifyProblem($record, $pID);
             
             $data['records'] = $this->problemmodel->getProblem();
+            $data['queryData'] = $this->problemmodel->getQueryData();
             $this->load->view('www/page/problem', $data);
     }
     
@@ -208,7 +211,7 @@ class ProblemController extends CI_Controller {
     public function problemStatistics() {
         $this->load->model('problemmodel');
         $data['statistics'] = $this->problemmodel->problemStatistics();
-                
+        $data['queryData'] = $this->problemmodel->getQueryData();
         $this->load->view('www/page/problem_Statistics', $data);
     }
 };

@@ -38,7 +38,7 @@
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">公司技术信息后台管理系统</div>
+        <div id="headerImg" class="width">重庆市创新方法数据管理系统</div>
         <div id="menu" class="width"></div>
         <div id="content" class="width">
             
@@ -53,7 +53,7 @@
             ?>
                 <input type = "hidden" name = "submited" value = "true"/>
                 <div class="updateLine loginTitle text">
-                    请首先登录后台信息管理系统...                  
+                    请首先登录重庆市创新方法数据管理系统...                  
                 </div>
                 
                 
@@ -91,7 +91,7 @@
     <script type="text/javascript">
 
     function checkLoginForm() {
-//        return checkLoginEmail() && checkLoginPwd();
+        return checkLoginEmail() && checkLoginPwd();
         return true;
     }
 

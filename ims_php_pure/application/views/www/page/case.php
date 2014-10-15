@@ -4,7 +4,7 @@
 -->
 <html>
     <head>
-        <title>技术案例</title>
+        <title>创新案例数据库</title>
 
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
@@ -25,7 +25,7 @@
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">公司技术信息后台管理系统</div>
+        <div id="headerImg" class="width">创新案例数据库</div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );
@@ -38,7 +38,7 @@
             <div class="searchAreas">
                 <!--按照名字搜索-->
                 <div class="searchLine">
-                    <span class="searchTitle">Search By Department: </span>
+                    <span class="searchTitle">根据公司修改 </span>
                     <?php 
                     $attributes = array('class' => 'form-horizontal');
                     echo form_open('casecontroller/selectCaseByDepartment', $attributes); 
