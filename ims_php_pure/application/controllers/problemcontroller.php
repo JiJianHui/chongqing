@@ -204,4 +204,11 @@ class ProblemController extends CI_Controller {
         
         $this->load->view('www/page/problem', $data);
     }
+    
+    public function problemStatistics() {
+        $this->load->model('problemmodel');
+        $data['statistics'] = $this->problemmodel->problemStatistics();
+                
+        $this->load->view('www/page/problem_Statistics', $data);
+    }
 };
