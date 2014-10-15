@@ -128,7 +128,7 @@
                     <a href = "<?php print $addURL?>">添加新的技术难题</a>
                     <div class="uploadFormDiv">
                     <?php
-                        echo form_open_multipart(site_url('upload/upload_file'));
+                        echo form_open_multipart(site_url('upload/upload_file?flag=p'));
                         echo form_upload('userfile');
                         echo form_submit('upload', '上传文件');
                     ?>    

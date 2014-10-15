@@ -45,4 +45,55 @@ class casemodel extends CI_Model {
         
         return $query->result();  
     }
+    
+    public function caseStatistics() {
+        // Get problems by eCategory
+        $query = $this->db->query('SELECT DISTINCT eCategory FROM ICase');
+        $res = $query->result();
+        $queryData['eCategories'] = $res;
+        
+        $i = 0;
+        
+        $problem_Array1 = NULL;
+        while($i < count($res)) {
+            $c = $res[$i]->eCategory;
+            
+            $query = $this->db->query('SELECT * FROM ICase WHERE eCategory = \''.$c.'\'');            
+            $resTmp = $query->result();
+            
+            $j= 0;
+            foreach($resTmp as $item) {
+                $problem_Array1[$i][$j] = $item;
+                $j = $j + 1;
+            }
+            
+            $i = $i + 1;
+        }
+        $queryData['cByECategory'] = $problem_Array1;
+        
+        // Get Problems by eContact
+        $query = $this->db->query('SELECT DISTINCT eContact FROM ICase');
+        $res = $query->result();
+        $queryData['eContact'] = $res;
+        
+        $i = 0;
+        $problem_Array2 = NULL;
+        while($i < count($res)) {
+            $c = $res[$i]->eContact;
+            $query = $this->db->query('SELECT * FROM ICase WHERE eContact = \''.$c.'\'');            
+            $resTmp = $query->result();
+            
+            $j= 0;
+            foreach($resTmp as $item) {
+                $problem_Array2[$i][$j] = $item;
+                $j = $j + 1;
+            }
+            $i = $i + 1;
+        }
+        
+        $queryData['cByEContact'] = $problem_Array2;
+        
+        
+        return $queryData;
+    }
 };

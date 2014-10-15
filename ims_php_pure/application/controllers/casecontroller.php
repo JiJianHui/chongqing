@@ -142,4 +142,11 @@ class CaseController extends CI_Controller {
         
         $this->load->view('www/page/case', $data);
     }
+    
+    public function caseStatistics() {
+        $this->load->model('casemodel');
+        $data['statistics'] = $this->casemodel->caseStatistics();
+                
+        $this->load->view('www/page/case_Statistics', $data);
+    }
 };

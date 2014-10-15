@@ -50,7 +50,7 @@
                     <?php echo form_close(); ?>
                 </div>
             </div>
-            
+            <a href = "<?php echo site_url('casecontroller/caseStatistics') ?>"> Stastics </a>  
             <!------------------搜索结果界面--------------------->
             <div class="searchResults">
                 <table class="recordTables">

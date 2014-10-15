@@ -13,7 +13,22 @@ class Upload extends CI_Controller {
         
 	function upload_file()
 	{
-		$config['upload_path'] = './uploads/';
+            $flag = $this->input->get('flag');
+            /*
+            switch($flag) {
+                case 's':
+                    $config['upload_path'] = './uploads/Student';
+                    break;
+                case 'p':
+                    $config['upload_path'] = './uploads/Problem';
+                    break;
+                case 'c':
+                    $config['upload_path'] = './uploads/ICase';
+                    break;
+		
+            }
+             * 
+             */$config['upload_path'] = './uploads';
 		$config['allowed_types'] = '*';
 
 		$this->load->library('upload', $config);
