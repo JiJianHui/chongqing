@@ -109,7 +109,7 @@ class CaseController extends CI_Controller {
     
     public function exportCase() {
         $this->load->model('casemodel');
-        $sID = $this->input->get('cID', true);
+        $cID = $this->input->get('cID', true);
         
         $data['records'] = $this->casemodel->selectCase($cID);
         
