@@ -79,11 +79,11 @@
                         <th class="MiddleTD">类别</th>
                         <th class="tinyTD">手机</th>
                         <!--<th class="MiddleTD">传真</th>-->
-                        <th class="MiddleTD">title</th>
-                        <th class="MiddleTD">abstract</th>
-                        <th class="tinyTD">cSolution</th>
-                        <th class="tinyTD">sEmployed</th>
-                        <th class="tinyTD">sImplementation</th>
+                        <th class="MiddleTD">标题</th>
+                        <th class="MiddleTD">摘要</th>
+                        <th class="tinyTD">计划方案</th>
+                        <th class="tinyTD">采用方案</th>
+                        <th class="tinyTD">实施方案</th>
                         <!--<th Modified class="MiddleTD">qq</th>-->
                         <th class="editCol">操作</th>
                     </tr>
