@@ -34,38 +34,40 @@
         </div>
         <div id="content" class="width">
 
-        Statistics by enterprise category<br/>
+        按照企业领域进行统计<br/>
         <?php 
             $i = 0;
-            echo count($statistics['eCategories']);
             while($i < count($statistics['eCategories'])) {
+                echo $i."  <   ".count($statistics['eCategories']);
                 $pCate = $statistics['eCategories'][$i];
-                echo $pCate."\xA";
+                echo "企业领域  ".$pCate."<br/>";
                 
                 $j = 0;
-                while($j < count($statistics['cByCategory'][$i])) {
-                    $pBC = $statistics['cByCategory'][$i][$j];
-                    echo $pBC->cID.'   '.$pBC->title.'  '.$pBC->description."\xA";
+                while($j < count($statistics['cByECategory'][$i])) {
+                    $pBC = $statistics['cByECategory'][$i][$j];
+                    echo "案例编号   ".$pBC->cID.'题目   '.$pBC->title.'描述   '.$pBC->description."<br/>";
                     $j = $j + 1;
                 } 
                 $i = $i + 1;
+                echo "<br/>";
             }
         ?>
         
-        Statistics by contact name<br/>
+        按照联系人进行统计<br/>
         <?php 
             $i = 0;
             while($i < count($statistics['eContact'])) {
                 $pCate = $statistics['eContact'][$i];
-                echo $pCate.'<br/>';
+                echo "联系人  ".$pCate."<br/>";
                 
                 $j = 0;
                 while($j < count($statistics['cByEContact'][$i])) {
                     $pBC = $statistics['cByEContact'][$i][$j];
-                    echo $pBC->cID.'   '.$pBC->title.'  '.$pBC->description."\xA";
+                    echo "案例编号   ".$pBC->cID.'题目   '.$pBC->title.'描述   '.$pBC->description."<br/>";
                 }
                 
                 $i = $i + 1;
+                echo "<br/>";
             }
         ?>        
         

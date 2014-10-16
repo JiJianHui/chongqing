@@ -169,8 +169,8 @@ class StudentController extends CI_Controller {
     }
     
     public function studentStatistics() {
-        $this->load->model('studentmmodel');
-        $data['statistics'] = $this->problemmodel->problemStatistics();
+        $this->load->model('studentmodel');
+        $data['statistics'] = $this->studentmodel->studentStatistics();
                 
         $this->load->view('www/page/student_Statistics', $data);
     }

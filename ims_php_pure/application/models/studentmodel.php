@@ -48,17 +48,17 @@ class StudentModel extends CI_Model {
     }
     
     public function studentStatistics() {
-        // Get problems by pCategory
-        $query = $this->db->query('SELECT DISTINCT pCategory FROM Problem');
+        // Get students by company
+        $query = $this->db->query('SELECT DISTINCT company FROM Student');
         $res = $query->result();
-        $queryData['pCategories'] = $res;
+        $queryData['companies'] = $res;
         
         $i = 0;
         
         while($i < count($res)) {
-            $c = $res[$i]->pCategory;
+            $c = $res[$i]->company;
             
-            $query = $this->db->query('SELECT * FROM Problem WHERE pCategory = \''.$c.'\'');            
+            $query = $this->db->query('SELECT * FROM Student WHERE company = \''.$c.'\'');            
             $resTmp = $query->result();
             
             $j= 0;
@@ -69,17 +69,17 @@ class StudentModel extends CI_Model {
             
             $i = $i + 1;
         }
-        $queryData['pByCategory'] = $problem_Array1;
+        $queryData['sByCompany'] = $problem_Array1;
         
-        // Get Problems by cName
-        $query = $this->db->query('SELECT DISTINCT cName FROM Problem');
+        // Get studetns by department
+        $query = $this->db->query('SELECT DISTINCT department FROM Student');
         $res = $query->result();
-        $queryData['cNames'] = $res;
+        $queryData['departments'] = $res;
         
         $i = 0;
         while($i < count($res)) {
-            $c = $res[$i]->cName;
-            $query = $this->db->query('SELECT * FROM Problem WHERE cName = \''.$c.'\'');            
+            $c = $res[$i]->department;
+            $query = $this->db->query('SELECT * FROM Student WHERE department = \''.$c.'\'');            
             $resTmp = $query->result();
             
             $j= 0;
@@ -90,30 +90,7 @@ class StudentModel extends CI_Model {
             $i = $i + 1;
         }
         
-        $queryData['pByCName'] = $problem_Array2;
-        
-        // Get Problems By eCategory
-        $query = $this->db->query('SELECT DISTINCT eCategory FROM Problem');
-        $res = $query->result();
-        $queryData['eCategories'] = $res;
-        
-        $i = 0;
-        
-        while($i < count($res)) {
-            $c = $res[$i]->eCategory;
-            $query = $this->db->query('SELECT * FROM Problem WHERE eCategory = \''.$c.'\'');            
-            $resTmp = $query->result();
-            
-            $j= 0;
-            foreach($resTmp as $item) {
-                $problem_Array3[$i][$j] = $item;
-                $j = $j + 1;
-            }
-            
-            $i = $i + 1;
-        }
-        $queryData['pByECategory'] = $problem_Array3;
-        
+        $queryData['sByDepartment'] = $problem_Array2;
         
         return $queryData;
     }

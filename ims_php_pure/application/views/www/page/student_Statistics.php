@@ -34,56 +34,43 @@
         </div>
         <div id="content" class="width">
 
-        Statistics by problem category<br/>
+        按照公司进行统计<br/>
         <?php 
             $i = 0;
-            while($i < count($statistics['pCategories'])) {
-                $pCate = $statistics['pCategories'][$i];
-                echo $pCate."\xA";
+            while($i < count($statistics['companies'])) {
+                $pCate = $statistics['companies'][$i];
+                echo "公司名称 ".$pCate."<br/>";
                 
                 $j = 0;
-                while($j < count($statistics['pByCategory'][$i])) {
-                    $pBC = $statistics['pByCategory'][$i][$j];
-                    echo $pBC->pID.'   '.$pBC->eName.'  '.$pBC->pDescription."\xA";
+                while($j < count($statistics['sByCompany'][$i])) {
+                    $pBC = $statistics['sByCompany'][$i][$j];
+                    echo "学生编号  ".$pBC->sID.'   学生姓名'.$pBC->sName.'   出生日期'.$pBC->birthday."<br/>";
                     $j = $j + 1;
                 } 
                 $i = $i + 1;
+                
+                echo "<br/>";
             }
         ?>
         
-        Statistics by contact name<br/>
+        按照部门进行统计<br/>
         <?php 
             $i = 0;
-            while($i < count($statistics['cNames'])) {
-                $pCate = $statistics['cNames'][$i];
-                echo $pCate.'<br/>';
+            while($i < count($statistics['departments'])) {
+                $pCate = $statistics['departments'][$i];
+                echo "部门  ".$pCate.'<br/>';
                 
                 $j = 0;
-                while($j < count($statistics['pByCName'][$i])) {
-                    $pBC = $statistics['pByCName'][$i][$j];
-                    echo $pBC->pID.'   '.$pBC->eName.'  '.$pBC->pDescription.'<br/>';
+                while($j < count($statistics['sByDepartment'][$i])) {
+                    $pBC = $statistics['sByDepartment'][$i][$j];
+                    echo "学生编号  ".$pBC->sID.'   学生姓名'.$pBC->sName.'   出生日期'.$pBC->birthday."<br/>";
                     $j = $j + 1;
                 } 
                 $i = $i + 1;
+                
+                echo "<br/>";
             }
         ?>        
-        
-        Statistics by enterprise category<br/>   
-        <?php 
-            $i = 0;
-            while($i < count($statistics['eCategories'])) {
-                $pCate = $statistics['eCategories'][$i];
-                echo $pCate."\xA";
-                
-                $j = 0;
-                while($j < count($statistics['pByECategory'][$i])) {
-                    $pBC = $statistics['pByECategory'][$i][$j];
-                    echo $pBC->pID.'   '.$pBC->eName.'  '.$pBC->pDescription."\xA";
-                    $j = $j + 1;
-                } 
-                $i = $i + 1;
-            }
-        ?>
         
         </div>
         <div id="footer" class="width">

@@ -34,53 +34,59 @@
         </div>
         <div id="content" class="width">
 
-        Statistics by problem category<br/>
+        按照问题所属领域进行统计<br/>
         <?php 
             $i = 0;
             while($i < count($statistics['pCategories'])) {
                 $pCate = $statistics['pCategories'][$i];
-                echo $pCate."\xA";
+                echo "问题所属领域 ".$pCate."<br/>";
                 
                 $j = 0;
                 while($j < count($statistics['pByCategory'][$i])) {
                     $pBC = $statistics['pByCategory'][$i][$j];
-                    echo $pBC->pID.'   '.$pBC->eName.'  '.$pBC->pDescription."\xA";
+                    echo "难题编号".$pBC->pID.'   企业名称'.$pBC->eName.'   问题描述'.$pBC->pDescription."<br/>";
                     $j = $j + 1;
                 } 
+                
+                echo "<br/>";
                 $i = $i + 1;
             }
         ?>
         
-        Statistics by contact name<br/>
+        按照联系人姓名进行统计<br/>
         <?php 
             $i = 0;
             while($i < count($statistics['cNames'])) {
                 $pCate = $statistics['cNames'][$i];
-                echo $pCate.'<br/>';
+                echo "联系人姓名".$pCate.'<br/>';
                 
                 $j = 0;
                 while($j < count($statistics['pByCName'][$i])) {
                     $pBC = $statistics['pByCName'][$i][$j];
-                    echo $pBC->pID.'   '.$pBC->eName.'  '.$pBC->pDescription.'<br/>';
+                    echo "难题编号".$pBC->pID.'   企业名称'.$pBC->eName.'   问题描述'.$pBC->pDescription."<br/>";
                     $j = $j + 1;
                 } 
+                
+                echo "<br/>";
                 $i = $i + 1;
             }
         ?>        
         
-        Statistics by enterprise category<br/>   
+        按照企业类别进行统计<br/>   
         <?php 
             $i = 0;
             while($i < count($statistics['eCategories'])) {
                 $pCate = $statistics['eCategories'][$i];
-                echo $pCate."\xA";
+                echo "企业类别".$pCate."<br/>";
                 
                 $j = 0;
                 while($j < count($statistics['pByECategory'][$i])) {
                     $pBC = $statistics['pByECategory'][$i][$j];
-                    echo $pBC->pID.'   '.$pBC->eName.'  '.$pBC->pDescription."\xA";
+                    echo "难题编号".$pBC->pID.'   企业名称'.$pBC->eName.'   问题描述'.$pBC->pDescription."<br/>";
                     $j = $j + 1;
                 } 
+                
+                echo "<br/>";
                 $i = $i + 1;
             }
         ?>
