@@ -95,7 +95,7 @@
                         <th class="tinyTD">姓名</th>
                         <th class="shortTD">性别</th>
                         <th class="shortTD">司龄</th>
-                        <th class="tinyTD">生日</th>
+                        <!--<th class="tinyTD">生日</th>-->
                         <!--<th class="MiddleTD">传真</th>-->
                         <!--<th class="MiddleTD">背景描述</th>-->
                         <th class="MiddleTD">专业</th>
@@ -116,7 +116,7 @@
                         <td class="tinyTD" title="<?php echo $rec->sName ?>"><?php echo $rec->sName ?></td>
                         <td class="shortTD" title='<?php echo $rec->sSex ?>'><?php echo $rec->sSex ?></td>
                         <td class="shortTD"><?php echo $rec->startWorkTime ?></td>
-                        <td class="MiddleTD"><?php echo $rec->birthday ?></td>
+                        <!--<td class="MiddleTD">?php echo $rec->birthday ?></td>-->
                         <!--<td class="MiddleTD">php echo $rec->faxNumber</td>-->
                         <!--<td class="MiddleTD">php echo $rec->bgDescription ?></td>-->
                         <td class="MiddleTD" title="<?php echo $rec->cMajor ?>"><?php echo $rec->cMajor ?></td>
