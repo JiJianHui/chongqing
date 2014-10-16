@@ -9,6 +9,9 @@ and open the template in the editor.
 */
 
 
+#content {
+}
+
 #menu ul li a{
     display: block;
     cursor: hand;
@@ -34,16 +37,16 @@ and open the template in the editor.
 }
 
 .loginLines{
-    width: 400px;
+    /*width: 400px;*/
     /*border: 1px solid blue;*/
-    margin-top: 50px;
+    margin-top: 50px auto;
     /*border: 1px dotted red;*/
     margin-left: 300px;
     text-align: left;
 }
     
  .updateLine{
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 15px;
     font-family: '宋体', 'Microsoft Yahei', '微软雅黑', sans-serif;;
     /*border: 1px dotted red;*/
@@ -63,6 +66,15 @@ and open the template in the editor.
 
 .updateLine .input{
     width: 300px;
+    background-color: white;
+    /*height: 40px;*/
+    vertical-align: middle;
+    margin-top: 8px;
+    padding: auto;
+    
+     max-height: 100px; 
+     _height : 40px; 
+     overflow-y:auto;
 }   
 
 .updateLine .btn{
@@ -93,6 +105,8 @@ and open the template in the editor.
     height: 30px;
     line-height: 30px;
     
+    _height:40px; 
+    
 }
 
 .searchResults{
@@ -105,13 +119,17 @@ and open the template in the editor.
     margin-bottom: 20px;
     line-height: 16px;
     width: 90%;
-    margin-left: 3%;
+    margin-left: 3px;
     font-family: Tahoma, Geneva,"\5FAE\8F6F\96C5\9ED1","\5b8b\4f53",sans-serif;
     table-layout: fixed;
 }
 
+.recordTables tr:hover{
+    background-color: mintcream;
+}
+
 .recordTables tr td,.recordTables tr th{
-    border: 1px dashed #bbb;
+    border: 1px dotted bisque;
     padding: 4px;
     text-align: center;
     /*width: 150px;*/
@@ -232,6 +250,7 @@ and open the template in the editor.
     width: 200px;
     display: inline;
     background-color: white;
+    height: 30px;
 }
 
 .addNewProblemForm .short{
@@ -246,8 +265,11 @@ and open the template in the editor.
     width:480px;
 }
 
+
+
+
 .addNewProblemForm .infoLine{
-    margin-top: 10px;
+    margin-top: 13px;
     margin-bottom:10px;
 }
 

@@ -21,11 +21,26 @@
         .style6 {color: #5C8096}
         -->
           </style>
+          
+          <script type="text/javascript">
+            $(function() {
+                if (window.PIE) {
+                    $('.rounded').each(function() {
+                        PIE.attach(this);
+                    });
+                }
+            });          
+          </script>          
+        
+        <script src="<?php echo base_url()?>www/js/PIE.js"></script>
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/IEstyle.css" media="screen, projection, tv " />
+        <![endif]-->       
     </head>
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">企业技术难题数据库</div>
+        <div id="headerImg" class="width"><span>企业技术难题数据库</span></div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );
@@ -46,7 +61,7 @@
                         <select name = "queryEName">
                             <?php foreach($queryData['queryEName'] as $item) { echo "<option value =".$item->eName." >".$item->eName; } ?>
                         </select>
-                        <input type= "submit" value="Ok" class="btn btn-primary btn-success"/>
+                        <input type= "submit" value="Ok" class="btn btn-primary btn-success rounded"/>
                     <?php echo form_close(); ?>
                 </div>
                 
@@ -60,7 +75,7 @@
                         <select name = "queryPCategory">
                             <?php foreach($queryData['queryCategory'] as $item) { echo "<option value =".$item->pCategory." >".$item->pCategory; }?>
                         </select>
-                        <input type= "submit" value="Ok" class="btn btn-primary btn-success"/>
+                        <input type= "submit" value="Ok" class="btn btn-primary btn-success rounded"/>
                     <?php echo form_close(); ?>
                 </div>
                 
@@ -74,13 +89,13 @@
                         <select name = "queryContactName">
                             <?php  foreach($queryData['queryCName'] as $item) { echo "<option value =".$item->cName." >".$item->cName; } ?>
                         </select>
-                        <input type= "submit" value="Ok" class="btn btn-primary btn-success"/>
+                        <input type= "submit" value="Ok" class="btn btn-primary btn-success rounded"/>
                     <?php echo form_close(); ?>
                 </div>
                 
             </div>
             
-            <a href = "<?php echo site_url('problemcontroller/problemStatistics')?>"> Stastics </a>           
+            <!--<a href = "php echo site_url('problemcontroller/problemStatistics')?>"> Stastics </a>-->           
                        
             <!------------------搜索结果界面--------------------->
             <div class="searchResults">

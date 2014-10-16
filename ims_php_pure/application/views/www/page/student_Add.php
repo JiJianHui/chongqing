@@ -21,11 +21,28 @@
         .style6 {color: #5C8096}
         -->
           </style>
+          
+          <script type="text/javascript">
+            $(function() {
+                if (window.PIE) {
+                    $('.rounded').each(function() {
+                        PIE.attach(this);
+                    });
+                }
+            });          
+          </script>          
+        
+        <script src="<?php echo base_url()?>www/js/PIE.js"></script>
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/IEstyle.css" media="screen, projection, tv " />
+        <![endif]-->
+          
+          
     </head>
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">创新人才管理数据库</div>
+        <div id="headerImg" class="width"><span>创新人才管理数据库</span></div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );
@@ -43,45 +60,45 @@
                 <div class="info">
                     <div class="title">创新人才基本信息</div>
                     <div class="infoLine">
-                        <span>姓名：</span><input type = "text" name = "sName" class="form-control">
-                        <span>性别：</span><input type = "text" name = "sSex" class="form-control">
-                        <span>生日：</span><input type = "text" name = "birthday" class="form-control">
+                        <span>姓名：</span><input type = "text" name = "sName" class="form-control rounded ">
+                        <span>性别：</span><input type = "text" name = "sSex" class="form-control rounded ">
+                        <span>生日：</span><input type = "text" name = "birthday" class="form-control rounded ">
                     </div>
                     
                     <div  class="infoLine">
                         
-                        <span>毕业院校：</span><input type = "text" name = "gSchool" class="form-control">
-                        <span>学历：</span><input type = "text" name = "education" class="form-control">
-                        <span>专业：</span><input type = "text" name = "major" class="form-control">
+                        <span>毕业院校：</span><input type = "text" name = "gSchool" class="form-control rounded ">
+                        <span>学历：</span><input type = "text" name = "education" class="form-control rounded ">
+                        <span>专业：</span><input type = "text" name = "major" class="form-control rounded ">
                         
                     </div>
                     
                     <div class="infoLine"></div>
                     
                     <div class="infoLine middleWide">
-                        <span>公司：</span><input type = "text" name = "company" class="form-control">
-                        <span>部门：</span><input type = "text" name = "department" class="form-control">
-                        <span>职位：</span><input type = "text" name = "eTitle" class="form-control">
+                        <span>公司：</span><input type = "text" name = "company" class="form-control rounded ">
+                        <span>部门：</span><input type = "text" name = "department" class="form-control rounded ">
+                        <span>职位：</span><input type = "text" name = "eTitle" class="form-control rounded ">
                     </div>
 
                     
                     <div  class="infoLine">
-                        <span>手机：</span><input type = "text" name = "mobilePhone" class="form-control">
-                        <span>座机：</span><input type = "text" name = "telePhone" class="form-control">
-                        <span>传真：</span><input type = "text" name = "faxNumber" class="form-control">
+                        <span>手机：</span><input type = "text" name = "mobilePhone" class="form-control rounded ">
+                        <span>座机：</span><input type = "text" name = "telePhone" class="form-control rounded ">
+                        <span>传真：</span><input type = "text" name = "faxNumber" class="form-control rounded ">
                     </div>
                     
                     <div class="infoLine"></div>
                     
                     <div class="infoLine middleWide">
-                        <span>E-mail：</span><input type = "text" name = "eMail" class="form-control">
-                        <span>QQ：</span><input type = "text" name = "qq" class="form-control">
-                        <!--<span>邮编：</span><input type = "text" name = "postCode" class="form-control">-->
-                        <span>司龄：</span><input type = "text" name = "startWorkTime" class="form-control">
+                        <span>E-mail：</span><input type = "text" name = "eMail" class="form-control rounded ">
+                        <span>QQ：</span><input type = "text" name = "qq" class="form-control rounded ">
+                        <!--<span>邮编：</span><input type = "text" name = "postCode" class="form-control rounded ">-->
+                        <span>司龄：</span><input type = "text" name = "startWorkTime" class="form-control rounded ">
                     </div>
                     
                     <div class="infoLine">
-                        <span>通信地址：</span><input type = "text" name = "address" class="form-control Long">
+                        <span>通信地址：</span><input type = "text" name = "address" class="form-control rounded  Long">
                     </div>
                     
                     

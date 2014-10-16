@@ -21,11 +21,28 @@
         .style6 {color: #5C8096}
         -->
           </style>
+          
+          <script type="text/javascript">
+            $(function() {
+                if (window.PIE) {
+                    $('.rounded').each(function() {
+                        PIE.attach(this);
+                    });
+                }
+            });          
+          </script>          
+        
+        <script src="<?php echo base_url()?>www/js/PIE.js"></script>
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/IEstyle.css" media="screen, projection, tv " />
+        <![endif]-->
+          
+          
     </head>
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">创新人才管理数据库</div>
+        <div id="headerImg" class="width"><span>创新人才管理数据库</span></div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );
@@ -68,7 +85,7 @@
                 
             </div>
             
-            <a href = "<?php echo site_url('studentcontroller/studentStatistics')?>"> Stastics </a> 
+            <!--<a href = "?php echo site_url('studentcontroller/studentStatistics')?>"> Stastics </a>--> 
             
             <!------------------搜索结果界面--------------------->
             <div class="searchResults">

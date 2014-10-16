@@ -21,11 +21,28 @@
         .style6 {color: #5C8096}
         -->
           </style>
+          
+          <script type="text/javascript">
+            $(function() {
+                if (window.PIE) {
+                    $('.rounded').each(function() {
+                        PIE.attach(this);
+                    });
+                }
+            });          
+          </script>          
+        
+        <script src="<?php echo base_url()?>www/js/PIE.js"></script>
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/IEstyle.css" media="screen, projection, tv " />
+        <![endif]-->
+          
+          
     </head>
     
     <body>
         <!--<div id="header" class="width">Modified</div>-->
-        <div id="headerImg" class="width">创新案例数据库</div>
+        <div id="headerImg" class="width"><span>创新案例数据库</span></div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );
@@ -43,28 +60,28 @@
                 <div class="info">
                     <div class="title">项目概要</div>
                     <div class="infoLine">
-                        <span>案例题目：</span><textarea name="title" rows="5" class="form-control Long"></textarea>
+                        <span>案例题目：</span><textarea name="title" rows="5" class="form-control rounded  Long"></textarea>
                     </div>
                     <div class="infoLine">
-                        <span>案例概要：</span><textarea name="abstract" rows="5" class="form-control Long"></textarea>
+                        <span>案例概要：</span><textarea name="abstract" rows="5" class="form-control rounded  Long"></textarea>
                     </div>
                     <div class="infoLine middleWide"></div>
                     <div class="infoLine">
-                        <span>案例描述：</span><textarea name="description" rows="5" class="form-control Long"></textarea>
+                        <span>案例描述：</span><textarea name="description" rows="5" class="form-control rounded  Long"></textarea>
                     </div>
                     
                     <div  class="infoLine">
-                        <span>解题过程：</span><textarea name="course" rows="5" class="form-control Long"></textarea>
+                        <span>解题过程：</span><textarea name="course" rows="5" class="form-control rounded  Long"></textarea>
                     </div>
                     <div class="infoLine  middleWide">
-                        <span>概念方案：</span><textarea name="cSolution" rows="5" class="form-control Long"></textarea>
+                        <span>概念方案：</span><textarea name="cSolution" rows="5" class="form-control rounded  Long"></textarea>
                     </div>
                     <div class="infoLine">
-                        <span>采用方案：</span><textarea name="sEmployed" rows="5" class="form-control Long"></textarea>
+                        <span>采用方案：</span><textarea name="sEmployed" rows="5" class="form-control rounded  Long"></textarea>
                     </div>
                     
                     <div class="infoLine middleWide">
-                        <span>方案实现：</span><textarea name="sImplementation" rows="5" class="form-control Long"></textarea>
+                        <span>方案实现：</span><textarea name="sImplementation" rows="5" class="form-control rounded  Long"></textarea>
                     </div>
                     
                 </div>

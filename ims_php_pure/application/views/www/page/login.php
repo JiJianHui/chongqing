@@ -12,6 +12,9 @@
         <meta charset="UTF-8">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">Modified-->
 	<script src="<?php echo base_url()?>www/js/jquery1.83.js"></script>
+        <!--[if lt IE 10]>
+        <script src="<?php echo base_url()?>www/js/PIE.js"></script>
+        <![endif]-->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/layout.css" media="screen, projection, tv " />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/html.css" media="screen, projection, tv " />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>www/css/index.css" media="screen, projection, tv " />
@@ -24,6 +27,15 @@
 //              $("#content").load("./application/views/www/page/loginContent.php");
               $("#footer").load("./application/views/www/layout/footer.html");
             });
+            
+            $(function() {
+                if (window.PIE) {
+                    $('.rounded').each(function() {
+                        PIE.attach(this);
+                    });
+                }
+            });
+            
         </script>
         
         <style type="text/css">
@@ -38,7 +50,7 @@
     
     <body>
         <!--<div id="header" class="width"></div>-->
-        <div id="headerImg" class="width">重庆市创新方法数据管理系统</div>
+        <div id="headerImg" class="width"><span>重庆市创新方法数据管理系统</span></div>
         <div id="menu" class="width"></div>
         <div id="content" class="width">
             
@@ -59,12 +71,12 @@
                 
                 <div class="updateLine">
                     <span class="text">邮箱：<span class="warning warningNickName" id="warningEmail">*</span></span>
-                    <input type="text" name="username" id="loginEmail" class="form-control input" placeholder="输入邮箱" />
+                    <input type="text" name="username" id="loginEmail" class="form-control input rounded" placeholder="输入邮箱" />
                 </div>
 
                 <div class="updateLine">
                     <span class="text">密码：<span class="warning old_password_msg input_msg" id="warningPassword">*</span></span>
-                    <input type="password" class="form-control old_password input" id="loginPassword" placeholder="输入密码" name='user_password'>
+                    <input type="password" class="form-control old_password input rounded" id="loginPassword" placeholder="输入密码" name='user_password'>
                 </div>
 
                 <div class="updateLine" style="margin-top: 25px; ">
