@@ -42,7 +42,7 @@
     
     <body>
         <!--<div id="header" class="width">Modified</div>-->
-        <div id="headerImg" class="width"><span>创新案例数据库</span></div>
+        <div id="headerImg" class="width"><span>创新方法案例数据库</span></div>
         <div id="menu" class="width">   
             <?php 
             chdir( dirname(__FILE__) );
