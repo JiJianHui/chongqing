@@ -28,6 +28,7 @@
                     $('.rounded').each(function() {
                         PIE.attach(this);
                     });
+                    
                 }
             });          
           </script>          

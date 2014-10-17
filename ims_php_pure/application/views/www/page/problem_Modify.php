@@ -15,6 +15,7 @@
         <link href="<?php echo base_url()?>/www/css/bootstrap.css" rel="stylesheet" type="text/css" />
         
         <style type="text/css">
+            
         <!--
         .style2 {color: #627E9A}
         .style3 {color: #62CC3C}
