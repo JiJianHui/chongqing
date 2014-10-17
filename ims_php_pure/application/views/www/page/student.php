@@ -85,7 +85,7 @@
                 
             </div>
             
-            <!--<a href = "?php echo site_url('studentcontroller/studentStatistics')?>"> Stastics </a>--> 
+            <a href = "<?php echo site_url('studentcontroller/studentStatistics')?>"> Stastics </a>--> 
             
             <!------------------搜索结果界面--------------------->
             <div class="searchResults">
