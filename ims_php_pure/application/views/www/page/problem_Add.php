@@ -99,7 +99,7 @@
                     <div class="infoLine">
                         <span>负责人：</span><input type = "text" name = "principal" class="form-control rounded">
                         <span>联系电话：</span><input type = "text" name = "phone2" class="form-control rounded">
-                        <span>传真：</span><input type = "text" name = "faxNumber2" class="form-control rounded">
+                        <span>邮箱：</span><input type = "text" name = "faxNumber2" class="form-control rounded">
                     </div>
                         
                     <div class="infoLine">

@@ -99,7 +99,7 @@
                     <div class="infoLine">
                         <span>负责人：</span><input type = "text" name = "contactName" class="form-control rounded"  value="<?php echo $records[0]->cName ?>">
                         <!--<span>联系电话：</span><input type = "text" name = "pFaxNumber" class="form-control"  value="php echo $records[0]->eCategory ?>">-->
-                        <span>传真：</span><input type = "text" name = "pFaxNumber" class="form-control rounded"  value="<?php echo $records[0]->pFaxNumber ?>">
+                        <span>邮箱：</span><input type = "text" name = "pFaxNumber" class="form-control rounded"  value="<?php echo $records[0]->pFaxNumber ?>">
                     </div>
                         
                     <div class="infoLine">
